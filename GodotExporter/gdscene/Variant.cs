@@ -4,39 +4,39 @@ namespace SonicRetro.SonLVL.GodotExporter
     {
         internal static class Vector2
         {
-            public float x;
-            public float y;
+            public float X;
+            public float Y;
         }
         internal static class Vector2i
         {
-            public int x;
-            public int y;
+            public int X;
+            public int Y;
         }
         internal static class Vector3
         {
-            public float x;
-            public float y;
-            public float z;
+            public float X;
+            public float Y;
+            public float Z;
         }
         internal static class Vector3i
         {
-            public int x;
-            public int y;
-            public int z;
+            public int X;
+            public int Y;
+            public int Z;
         }
         internal static class Vector4
         {
-            public float x;
-            public float y;
-            public float z;
-            public float w;
+            public float X;
+            public float Y;
+            public float Z;
+            public float W;
         }
         internal static class Vector4i
         {
-            public int x;
-            public int y;
-            public int z;
-            public int w;
+            public int X;
+            public int Y;
+            public int Z;
+            public int W;
         }
         internal static class Rect2
         {
@@ -47,6 +47,28 @@ namespace SonicRetro.SonLVL.GodotExporter
         {
             public Vector2i Position;
             public Vector2i Size;
+        }
+        internal static class AABB
+        {
+            public Vector3 Position;
+            public Vector3 Size;
+        }
+        internal static class Basis
+        {
+            public Vector3 X;
+            public Vector3 Y;
+            public Vector3 z;
+        }
+        internal static class Transform2D
+        {
+            public Vector2 Origin;
+            public Vector2 X;
+            public Vector2 Y;
+        }
+        internal static class Transform3D
+        {
+            public Basis Basis;
+            public Vector3 Origin;
         }
         internal static enum VariantType
         {
@@ -63,13 +85,16 @@ namespace SonicRetro.SonLVL.GodotExporter
             RECT2I,
             AABB,
             PACKEDBYTEARRAY,
-            PACKEDFLOATARRAY,
-            PACKEDINTARRAY,
+            PACKEDFLOAT32ARRAY,
+            PACKEDFLOAT64ARRAY,
+            PACKEDINT32ARRAY,
+            PACKEDINT64ARRAY,
             PACKEDVECTOR2ARRAY,
             PACKEDVECTOR3ARRAY,
             PACKEDVECTOR4ARRAY,
             PACKEDSTRINGARRAY
         }
+        internal 
         internal byte[] PackedByteArrayValue;
         internal float[] PackedFloatArrayValue;
         internal int[] PackedIntArrayValue;
