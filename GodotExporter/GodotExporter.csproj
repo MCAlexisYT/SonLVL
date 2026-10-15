@@ -37,10 +37,18 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Generic" />
+    <Reference Include="SonicRetro.SonLVL.API" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="scene\SceneExternalDependency.cs" />
     <Compile Include="scene\SceneInternalResource.cs" />
     <Compile Include="scene\SceneNode.cs" />
+    <Compile Include="scene\SceneSignal.cs" />
+    <Compile Include="scene\Scene.cs" />
     <Compile Include="scene\Variant.cs" />
+    <Compile Include="Exporter.cs" />
   </ItemGroup>
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
