@@ -38,17 +38,37 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Collections.Generic" />
-    <Reference Include="SonicRetro.SonLVL.API" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Marshalls.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="scene\SceneExternalDependency.cs" />
     <Compile Include="scene\SceneInternalResource.cs" />
     <Compile Include="scene\SceneNode.cs" />
     <Compile Include="scene\SceneSignal.cs" />
     <Compile Include="scene\Scene.cs" />
+    <Compile Include="scene\TileMapLayerProxy.cs" />
+    <Compile Include="scene\TileSetProxy.cs" />
     <Compile Include="scene\Variant.cs" />
     <Compile Include="Exporter.cs" />
   </ItemGroup>
-<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SonLVLAPI\SonLVL.API.csproj">
+      <Project>{01d2110b-f4e7-4914-8781-8b1c24d888ad}</Project>
+      <Name>SonLVL.API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

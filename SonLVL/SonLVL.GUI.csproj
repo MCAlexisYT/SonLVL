@@ -37,6 +37,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -60,6 +61,12 @@
     </Compile>
     <Compile Include="ChunkBlockEditor.Designer.cs">
       <DependentUpon>ChunkBlockEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GdExportSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GdExportSettingsDialog.Designer.cs">
+      <DependentUpon>GdExportSettingsDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="LoadErrorDialog.cs">
       <SubType>Form</SubType>
@@ -250,6 +257,9 @@
     <EmbeddedResource Include="FindObjectsDialog.resx">
       <DependentUpon>FindObjectsDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GdExportSettingsDialog.resx">
+      <DependentUpon>GdExportSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImportProgressControl.resx">
       <DependentUpon>ImportProgressControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +378,10 @@
     <None Include="Resources\pencilcur.cur" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GodotExporter\GodotExporter.csproj">
+      <Project>{ca06e2f2-6c43-41f3-a2db-643a104105c3}</Project>
+      <Name>GodotExporter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SonLVLAPI\SonLVL.API.csproj">
       <Project>{01D2110B-F4E7-4914-8781-8B1C24D888AD}</Project>
       <Name>SonLVL.API</Name>

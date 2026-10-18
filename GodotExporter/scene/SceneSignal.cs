@@ -9,7 +9,7 @@ namespace SonicRetro.SonLVL.GodotExporter
 
         public override string ToString()
         {
-            return "[connection signal=\"" + Signal + "\" from=\"" + From.Name + "\" to=\"" + To.Name = "\" method=\"" + Method + "\"]";
+            return "[connection signal=\"" + Signal + "\" from=\"" + From.Name + "\" to=\"" + To.Name + "\" method=\"" + Method + "\"]";
         }
     }
 }

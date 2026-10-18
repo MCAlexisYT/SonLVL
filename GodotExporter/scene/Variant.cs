@@ -15,9 +15,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public float Y;
 			public override string ToString()
 			{
-				return "Vector2(" + numbers() + ")";
+				return "Vector2(" + Numbers() + ")";
 			}
-			public string numbers()
+			public string Numbers()
 			{
 				return X.ToString() + ", " + Y.ToString();
 			}
@@ -44,9 +44,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public int Y;
 			public override string ToString()
 			{
-				return "Vector2i(" + numbers() + ")";
+				return "Vector2i(" + Numbers() + ")";
 			}
-			public string numbers()
+			public string Numbers()
 			{
 				return X.ToString() + ", " + Y.ToString();
 			}
@@ -68,9 +68,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public float Z;
 			public override string ToString()
 			{
-				return "Vector3(" + numbers() + ")";
+				return "Vector3(" + Numbers() + ")";
 			}
-			public string numbers()
+			public string Numbers()
 			{
 				return X.ToString() + ", " + Y.ToString() + ", " + Z.ToString();
 			}
@@ -106,9 +106,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public int Z;
 			public override string ToString()
 			{
-				return "Vector3i(" + numbers() + ")";
+				return "Vector3i(" + Numbers() + ")";
 			}
-			public string numbers()
+			public string Numbers()
 			{
 				return X.ToString() + ", " + Y.ToString() + ", " + Z.ToString();
 			}
@@ -145,9 +145,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public float W;
 			public override string ToString()
 			{
-				return "Vector4(" + numbers() + ")";
+				return "Vector4(" + Numbers() + ")";
 			}
-			public string numbers()
+			public string Numbers()
 			{
 				return X.ToString() + ", " + Y.ToString() + ", " + Z.ToString() + ", " + W.ToString();
 			}
@@ -216,9 +216,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public int W;
 			public override string ToString()
 			{
-				return "Vector4i(" + numbers() + ")";
+				return "Vector4i(" + Numbers() + ")";
 			}
-			public string numbers()
+			public string Numbers()
 			{
 				return X.ToString() + ", " + Y.ToString() + ", " + Z.ToString() + ", " + W.ToString();
 			}
@@ -285,7 +285,7 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public Vector2 Size;
 			public override string ToString()
 			{
-				return "Rect2(" + Position.numbers() + ", " + Size.numbers() + ")";
+				return "Rect2(" + Position.Numbers() + ", " + Size.Numbers() + ")";
 			}
 			public Rect2(Vector2 pos, Vector2 size)
 			{
@@ -299,7 +299,7 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public Vector2i Size;
 			public override string ToString()
 			{
-				return "Rect2i(" + Position.numbers() + ", " + Size.numbers() + ")";
+				return "Rect2i(" + Position.Numbers() + ", " + Size.Numbers() + ")";
 			}
 			public Rect2i(Vector2i pos, Vector2i size)
 			{
@@ -313,7 +313,7 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public Vector3 Size;
 			public override string ToString()
 			{
-				return "AABB(" + Position.numbers() + ", " + Size.numbers() + ")";
+				return "AABB(" + Position.Numbers() + ", " + Size.Numbers() + ")";
 			}
 			public AABB(Vector3 pos, Vector3 size)
 			{
@@ -328,9 +328,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public Vector3 Z;
 			public override string ToString()
 			{
-				return "Basis(" + numbers() + ")";
+				return "Basis(" + Numbers() + ")";
 			}
-			public string numbers()
+			public string Numbers()
 			{
 				return X.ToString() + ", " + Y.ToString() + ", " + Z.ToString();
 			}
@@ -363,7 +363,7 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public Vector3 Origin;
 			public override string ToString()
 			{
-				return "Transform3D(" + Basis.numbers() + ", " + Origin.numbers() + ")";
+				return "Transform3D(" + Basis.Numbers() + ", " + Origin.Numbers() + ")";
 			}
 			public Transform3D(Basis basis, Vector3 origin)
 			{
@@ -379,9 +379,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public float A;
 			public override string ToString()
 			{
-				return "Color(" + numbers() + ")";
+				return "Color(" + Numbers() + ")";
 			}
-			public string numbers()
+			public string Numbers()
 			{
 				return R.ToString() + ", " + G.ToString() + ", " + B.ToString() + ", " + A.ToString();
 			}
@@ -540,21 +540,21 @@ namespace SonicRetro.SonLVL.GodotExporter
 				case VariantType.PACKEDVECTOR2ARRAY:
 					foreach (var item in PackedVector2ArrayValue)
 					{
-						str += ", " + item.numbers();
+						str += ", " + item.Numbers();
 					}
 
 					return "PackedVector2Array(" + str.Substring(2) + ")";
 				case VariantType.PACKEDVECTOR3ARRAY:
 					foreach (var item in PackedVector3ArrayValue)
 					{
-						str += ", " + item.numbers();
+						str += ", " + item.Numbers();
 					}
 
 					return "PackedVector3Array(" + str.Substring(2) + ")";
 				case VariantType.PACKEDVECTOR4ARRAY:
 					foreach (var item in PackedVector4ArrayValue)
 					{
-						str += ", " + item.numbers();
+						str += ", " + item.Numbers();
 					}
 
 					return "PackedVector4Array(" + str.Substring(2) + ")";
@@ -583,7 +583,7 @@ namespace SonicRetro.SonLVL.GodotExporter
 				case VariantType.PACKEDCOLORARRAY:
 					foreach (var item in PackedColorArrayValue)
 					{
-						str += ", " + item.numbers();
+						str += ", " + item.Numbers();
 					}
 
 					return "PackedColorArray(" + str.Substring(2) + ")";
@@ -606,67 +606,83 @@ namespace SonicRetro.SonLVL.GodotExporter
 
 		public static Variant FromPrimitive(string value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.STRING;
+			Variant var = new Variant
+			{
+				Type = VariantType.STRING,
 
-			var.StringValue = value;
+				StringValue = value
+			};
 			return var;
 		}
 		public static Variant FromPrimitive(float value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.FLOAT;
+			Variant var = new Variant
+			{
+				Type = VariantType.FLOAT,
 
-			var.FloatValue = value;
+				FloatValue = value
+			};
 			return var;
 		}
 		public static Variant FromPrimitive(int value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.INT;
+			Variant var = new Variant
+			{
+				Type = VariantType.INT,
 
-			var.IntValue = value;
+				IntValue = value
+			};
 			return var;
 		}
 		public static Variant FromPrimitive(bool value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.BOOL;
+			Variant var = new Variant
+			{
+				Type = VariantType.BOOL,
 
-			var.BoolValue = value;
+				BoolValue = value
+			};
 			return var;
 		}
 
 		public static Variant FromPrimitiveArray(byte[] value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.PACKEDBYTEARRAY;
+			Variant var = new Variant
+			{
+				Type = VariantType.PACKEDBYTEARRAY,
 
-			var.PackedByteArrayValue = new List<byte>(value);
+				PackedByteArrayValue = new List<byte>(value)
+			};
 			return var;
 		}
 		public static Variant FromPrimitiveArray(int[] value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.PACKEDINT32ARRAY;
+			Variant var = new Variant
+			{
+				Type = VariantType.PACKEDINT32ARRAY,
 
-			var.PackedIntArrayValue = new List<int>(value);
+				PackedIntArrayValue = new List<int>(value)
+			};
 			return var;
 		}
 		public static Variant FromPrimitiveArray(float[] value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.PACKEDFLOAT32ARRAY;
+			Variant var = new Variant
+			{
+				Type = VariantType.PACKEDFLOAT32ARRAY,
 
-			var.PackedFloatArrayValue = new List<float>(value);
+				PackedFloatArrayValue = new List<float>(value)
+			};
 			return var;
 		}
 		public static Variant FromPrimitiveArray(string[] value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.PACKEDSTRINGARRAY;
+			Variant var = new Variant
+			{
+				Type = VariantType.PACKEDSTRINGARRAY,
 
-			var.PackedStringArrayValue = new List<string>(value);
+				PackedStringArrayValue = new List<string>(value)
+			};
 			return var;
 		}
 
@@ -685,107 +701,151 @@ namespace SonicRetro.SonLVL.GodotExporter
 
 		public static Variant NewVec2(float x, float y)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR2;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR2,
 
-			var.Vector2Value = new Vector2(x, y);
+				Vector2Value = new Vector2(x, y)
+			};
 			return var;
 		}
 		public static Variant NewVec2(Vector2 value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR2;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR2,
 
-			var.Vector2Value = new Vector2(value);
+				Vector2Value = new Vector2(value)
+			};
 			return var;
 		}
 
 		public static Variant NewVec2i(int x, int y)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR2I;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR2I,
 
-			var.Vector2iValue = new Vector2i(x, y);
+				Vector2iValue = new Vector2i(x, y)
+			};
 			return var;
 		}
 		public static Variant NewVec2i(Vector2i value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR2I;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR2I,
 
-			var.Vector2iValue = new Vector2i(value);
+				Vector2iValue = new Vector2i(value)
+			};
 			return var;
 		}
 
 		public static Variant NewVec3(float x, float y, float z)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR3;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR3,
 
-			var.Vector3Value = new Vector3(x, y, z);
+				Vector3Value = new Vector3(x, y, z)
+			};
 			return var;
 		}
 		public static Variant NewVec3(Vector3 value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR3;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR3,
 
-			var.Vector3Value = new Vector3(value);
+				Vector3Value = new Vector3(value)
+			};
 			return var;
 		}
 
 		public static Variant NewVec3i(int x, int y, int z)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR3I;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR3I,
 
-			var.Vector3iValue = new Vector3i(x, y, z);
+				Vector3iValue = new Vector3i(x, y, z)
+			};
 			return var;
 		}
 		public static Variant NewVec3i(Vector3i value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR3I;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR3I,
 
-			var.Vector3iValue = new Vector3i(value);
+				Vector3iValue = new Vector3i(value)
+			};
 			return var;
 		}
 
 		public static Variant NewVec4(float x, float y, float z, float w)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR4;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR4,
 
-			var.Vector4Value = new Vector4(x, y, z, w);
+				Vector4Value = new Vector4(x, y, z, w)
+			};
 			return var;
 		}
-		public static Variant newVec4(Vector4 value)
+		public static Variant NewVec4(Vector4 value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR4;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR4,
 
-			var.Vector4Value = new Vector4(value);
+				Vector4Value = new Vector4(value)
+			};
 			return var;
 		}
 
-		public static Variant newVec4i(int x, int y, int z, int w)
+		public static Variant NewVec4i(int x, int y, int z, int w)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR4I;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR4I,
 
-			var.Vector4iValue = new Vector4i(x, y, z, w);
+				Vector4iValue = new Vector4i(x, y, z, w)
+			};
 			return var;
 		}
-		public static Variant newVec4i(Vector4i value)
+		public static Variant NewVec4i(Vector4i value)
 		{
-			Variant var = new Variant();
-			var.Type = VariantType.VECTOR4I;
+			Variant var = new Variant
+			{
+				Type = VariantType.VECTOR4I,
 
-			var.Vector4iValue = new Vector4i(value);
+				Vector4iValue = new Vector4i(value)
+			};
 			return var;
 		}
 
+		public static Variant FromInternalResource(SceneInternalResource resource)
+		{
+			Variant var = new Variant
+			{
+				Type = VariantType.INTERNAL_RESOURCE,
 
+				IntResourceRef = resource
+			};
+			return var;
+		}
+
+		public static Variant FromExternalDependency(SceneExternalDependency resource)
+		{
+			Variant var = new Variant
+			{
+				Type = VariantType.EXTERNAL_DEPENDENCY,
+
+				ExtResourceRef = resource
+			};
+			return var;
+		}
 	}
 
 }

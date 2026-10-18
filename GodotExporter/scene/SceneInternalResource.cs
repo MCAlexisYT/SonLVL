@@ -7,13 +7,13 @@ namespace SonicRetro.SonLVL.GodotExporter
 	{
 		public string Type;
 		public string ID;
-		public Dictionary<string, Variant> KV;
+		public Dictionary<string, Variant> KVs;
 
 		public override string ToString()
 		{
 			string str = "[sub_resource type=\"" + Type + "\" id=\"" + ID + "\"]";
 
-			foreach (var kv in KV)
+			foreach (var kv in KVs)
 			{
 				str += "\n" + kv.Key + " = " + kv.Value.ToString();
 			}

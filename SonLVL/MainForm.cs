@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
+using SonicRetro.SonLVL.GodotExporter;
 using ChaotixObjectEntry = SonicRetro.SonLVL.API.Chaotix.ChaotixObjectEntry;
 using S1ObjectEntry = SonicRetro.SonLVL.API.S1.S1ObjectEntry;
 using SCDObjectEntry = SonicRetro.SonLVL.API.SCD.SCDObjectEntry;
@@ -10556,6 +10557,11 @@ namespace SonicRetro.SonLVL.GUI
 							break;
 					}
 				}
+		}
+
+		private void exportToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			GodotExporter.Exporter.Export();
 		}
 
 		private void removeDuplicateBlocksToolStripButton_Click(object sender, EventArgs e)

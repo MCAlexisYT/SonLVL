@@ -8,28 +8,28 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 {
 	public class Scene
 	{
-		public List<SceneNode> nodes;
-		public List<SceneInternalResource> resources;
-		public List<SceneExternalDependency> externalDependencies;
-		public List<SceneSignal> signals;
-		public string ToString()
+		public List<SceneNode> Nodes;
+		public List<SceneInternalResource> Resources;
+		public List<SceneExternalDependency> ExternalDependencies;
+		public List<SceneSignal> Signals;
+		public override string ToString()
 		{
 			string str = "[gd_scene format=3]\n";
 
-			foreach (var item in externalDependencies)
+			foreach (var item in ExternalDependencies)
 			{
 				str += "\n" + item.ToString();
 			}
-			foreach (var item in resources)
+			foreach (var item in Resources)
 			{
 				str += "\n\n" + item.ToString();
 			}
-			foreach (var item in nodes)
+			foreach (var item in Nodes)
 			{
 				str += "\n\n" + item.ToString();
 			}
 			str += "\n";
-			foreach (var item in signals)
+			foreach (var item in Signals)
 			{
 				str += "\n" + item.ToString();
 			}
