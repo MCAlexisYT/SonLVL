@@ -3,6 +3,7 @@ using System.Runtime.ExceptionServices;
 using SonicRetro.SonLVL.GodotExporter;
 using System;
 using System.Runtime.Versioning;
+using System.Drawing;
 
 namespace SonicRetro.SonLVL.GodotExporter
 {
@@ -20,6 +21,11 @@ namespace SonicRetro.SonLVL.GodotExporter
 			public string Numbers()
 			{
 				return X.ToString() + ", " + Y.ToString();
+			}
+
+			public PointF ToPointF()
+			{
+				return new PointF(X, Y);
 			}
 
 			public Vector2(float x, float y)
@@ -50,6 +56,11 @@ namespace SonicRetro.SonLVL.GodotExporter
 			{
 				return X.ToString() + ", " + Y.ToString();
 			}
+			public Point ToPoint()
+			{
+				return new Point(X, Y);
+			}
+
 			public Vector2i(int x, int y)
 			{
 				X = x;
@@ -392,6 +403,15 @@ namespace SonicRetro.SonLVL.GodotExporter
 				B = b;
 				A = a;
 			}
+
+			public System.Drawing.Color ToSysColor()
+			{
+				byte r = (byte)(R * 255);
+				byte g = (byte)(G * 255);
+				byte b = (byte)(B * 255);
+				byte a = (byte)(A * 255);
+				return System.Drawing.Color.FromArgb(a, r, g, b);
+			}
 		}
 		public class Projection
 		{
@@ -606,84 +626,76 @@ namespace SonicRetro.SonLVL.GodotExporter
 
 		public static Variant FromPrimitive(string value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.STRING,
 
 				StringValue = value
 			};
-			return var;
 		}
 		public static Variant FromPrimitive(float value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.FLOAT,
 
 				FloatValue = value
 			};
-			return var;
 		}
 		public static Variant FromPrimitive(int value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.INT,
 
 				IntValue = value
 			};
-			return var;
 		}
 		public static Variant FromPrimitive(bool value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.BOOL,
 
 				BoolValue = value
 			};
-			return var;
 		}
 
 		public static Variant FromPrimitiveArray(byte[] value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.PACKEDBYTEARRAY,
 
 				PackedByteArrayValue = new List<byte>(value)
 			};
-			return var;
 		}
 		public static Variant FromPrimitiveArray(int[] value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.PACKEDINT32ARRAY,
 
 				PackedIntArrayValue = new List<int>(value)
 			};
-			return var;
 		}
 		public static Variant FromPrimitiveArray(float[] value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.PACKEDFLOAT32ARRAY,
 
 				PackedFloatArrayValue = new List<float>(value)
 			};
-			return var;
 		}
 		public static Variant FromPrimitiveArray(string[] value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.PACKEDSTRINGARRAY,
 
 				PackedStringArrayValue = new List<string>(value)
 			};
-			return var;
 		}
 
 		public static Variant FromPrimitiveArray64Bit(float[] value)
@@ -701,150 +713,187 @@ namespace SonicRetro.SonLVL.GodotExporter
 
 		public static Variant NewVec2(float x, float y)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR2,
 
 				Vector2Value = new Vector2(x, y)
 			};
-			return var;
 		}
 		public static Variant NewVec2(Vector2 value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR2,
 
 				Vector2Value = new Vector2(value)
 			};
-			return var;
 		}
 
 		public static Variant NewVec2i(int x, int y)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR2I,
 
 				Vector2iValue = new Vector2i(x, y)
 			};
-			return var;
 		}
 		public static Variant NewVec2i(Vector2i value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR2I,
 
 				Vector2iValue = new Vector2i(value)
 			};
-			return var;
 		}
 
 		public static Variant NewVec3(float x, float y, float z)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR3,
 
 				Vector3Value = new Vector3(x, y, z)
 			};
-			return var;
 		}
 		public static Variant NewVec3(Vector3 value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR3,
 
 				Vector3Value = new Vector3(value)
 			};
-			return var;
 		}
 
 		public static Variant NewVec3i(int x, int y, int z)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR3I,
 
 				Vector3iValue = new Vector3i(x, y, z)
 			};
-			return var;
 		}
 		public static Variant NewVec3i(Vector3i value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR3I,
 
 				Vector3iValue = new Vector3i(value)
 			};
-			return var;
 		}
 
 		public static Variant NewVec4(float x, float y, float z, float w)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR4,
 
 				Vector4Value = new Vector4(x, y, z, w)
 			};
-			return var;
 		}
 		public static Variant NewVec4(Vector4 value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR4,
 
 				Vector4Value = new Vector4(value)
 			};
-			return var;
 		}
 
 		public static Variant NewVec4i(int x, int y, int z, int w)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR4I,
 
 				Vector4iValue = new Vector4i(x, y, z, w)
 			};
-			return var;
 		}
 		public static Variant NewVec4i(Vector4i value)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.VECTOR4I,
 
 				Vector4iValue = new Vector4i(value)
 			};
-			return var;
 		}
 
 		public static Variant FromInternalResource(SceneInternalResource resource)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.INTERNAL_RESOURCE,
 
 				IntResourceRef = resource
 			};
-			return var;
 		}
 
 		public static Variant FromExternalDependency(SceneExternalDependency resource)
 		{
-			Variant var = new Variant
+			return new Variant
 			{
 				Type = VariantType.EXTERNAL_DEPENDENCY,
 
 				ExtResourceRef = resource
 			};
-			return var;
+		}
+
+		public static Variant FromDictionary(Dictionary<Variant, Variant> dict)
+		{
+			return new Variant
+			{
+				Type = VariantType.DICTIONARY,
+				DictionaryValue = dict
+			};
+		}
+
+		public static Variant FromVec2Array(Vector2[] value)
+		{
+			return new Variant
+			{
+				Type = VariantType.PACKEDVECTOR2ARRAY,
+				PackedVector2ArrayValue = new List<Vector2>(value)
+			};
+		}
+
+		public static Variant FromVec2Array(List<Vector2> value)
+		{
+			return FromVec2Array(value.ToArray());
+		}
+
+		public static Variant FromVec3Array(Vector3[] value)
+		{
+			return new Variant
+			{
+				Type = VariantType.PACKEDVECTOR3ARRAY,
+				PackedVector3ArrayValue = new List<Vector3>(value)
+			};
+		}
+
+		public static Variant FromVec3Array(List<Vector3> value)
+		{
+			return FromVec3Array(value.ToArray());
+		}
+
+		public static Variant FromVec4Array(Vector4[] value)
+		{
+			return new Variant
+			{
+				Type = VariantType.PACKEDVECTOR4ARRAY,
+				PackedVector4ArrayValue = new List<Vector4>(value)
+			};
+		}
+
+		public static Variant FromVec4Array(List<Vector4> value)
+		{
+			return FromVec4Array(value.ToArray());
 		}
 	}
 
