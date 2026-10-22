@@ -32,6 +32,7 @@ namespace SonicRetro.SonLVL.API
 		public static LayoutFormat LayoutFormat;
 		public static List<string> PalName;
 		public static List<SonLVLColor[,]> Palette;
+		public static SonLVLColor[,] GdExportPalette;
 		public static List<byte[,]> PalNum;
 		public static List<int[,]> PalAddr;
 		public static int CurPal;
@@ -674,6 +675,7 @@ namespace SonicRetro.SonLVL.API
 		{
 			PalName = new List<string>();
 			Palette = new List<SonLVLColor[,]>();
+			GdExportPalette = new SonLVLColor[16,4]();
 			PalNum = new List<byte[,]>();
 			PalAddr = new List<int[,]>();
 			if (Level.Palette == null || string.IsNullOrWhiteSpace(Level.Palette[0].Filename))
@@ -701,6 +703,19 @@ namespace SonicRetro.SonLVL.API
 				}
 			}
 			CurPal = 0;
+			for (int palnum = 0; palnum < Level.GdExportOverridePaletteOverrides.Length; palnum++)
+			{
+				if (Level.GdExportOverridePaletteOverrides[palnum])
+				{
+					SonLVLColor col = new SonLVLColor();
+					col.MDColor = Level.GdExportOverridePaletteColors[palnum / 16, palnum % 4];
+					GdExportPalette[palnum / 16, palnum % 4] = col;
+				}
+				else
+				{
+					GdExportPalette[palnum / 16, palnum % 4] = Palette[0][palnum / 16, palnum % 4];
+				}
+			}
 		}
 
 		private static void LoadLevelColInds()

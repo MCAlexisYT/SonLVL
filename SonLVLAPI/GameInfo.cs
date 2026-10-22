@@ -335,6 +335,12 @@ namespace SonicRetro.SonLVL.API
 		[IniName("palette")]
 		[IniCollection(IniCollectionMode.NoSquareBrackets, StartIndex = 2)]
 		public NamedPaletteList[] ExtraPalettes { get; set; }
+		[IniName("gdexport_override_palette_overrides")]
+		[IniCollection(IniCollectionMode.NoSquareBrackets, StartIndex = 2)]
+		public bool[] GdExportOverridePaletteOverrides {get; set; };
+		[IniName("gdexport_override_palette_colors")]
+		[IniCollection(IniCollectionMode.NoSquareBrackets, StartIndex = 2)]
+		public short[] GdExportOverridePaletteColors {get; set; }
 		[DefaultValue(0)]
 		[IniName("waterpal")]
 		public int WaterPalette { get; set; }
