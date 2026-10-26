@@ -109,7 +109,7 @@ namespace SonicRetro.SonLVL.GUI
 
 		ImageAttributes imageTransparency = new ImageAttributes();
 		Bitmap LevelBmp;
-		Graphics LevelGfx, PalettePanelGfx, ChunkPictureGfx;
+		Graphics LevelGfx, PalettePanelGfx, ChunkPictureGfx, GdExportPaletteOverridePanelGfx;
 		BufferedGraphics ChunkPictureGfxBuffer;
 		bool loaded;
 		ushort SelectedChunk;
@@ -10562,6 +10562,353 @@ namespace SonicRetro.SonLVL.GUI
 		private void exportToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
 			GodotExporter.Exporter.Export();
+		}
+
+		private bool[,] exportpal_override_cache = new bool[4, 16];
+		private Color[,] exportpal_cache;
+		private void PaintExportPalette()
+		{
+			if (!loaded) return;
+			Color[,] pal = exportpal_cache;
+			if (pal == null)
+			{
+				pal = new Color[4, 16];
+				for (int y = 0; y < 4; y++)
+					for (int x = 0; x < 16; x++)
+						pal[y, x] = LevelData.GdExportPaletteToColor(y, x);
+			}
+			for (int y = 0; y < 4; y++)
+				for (int x = 0; x < 16; x++)
+				{
+					
+
+				}
+		}
+
+		private void GdExportPaletteOverride1_CheckedChanged(object sender, EventArgs e)
+		{
+			if (sender is CheckBox)
+				exportpal_override_cache[0, 0] = ((CheckBox)sender).Checked;
+		}
+
+		private void GdExportPaletteOverride2_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride3_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride4_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride5_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride6_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride7_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride8_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride9_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride10_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride11_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride12_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride13_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride14_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride15_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride16_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride17_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride18_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride19_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride20_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride21_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride22_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride23_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride24_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride25_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride26_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride27_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride28_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride29_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride30_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride31_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride32_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride33_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride34_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride35_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride36_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride37_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride38_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride39_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride40_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride41_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride42_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride43_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride44_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride45_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride46_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride47_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride48_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride49_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride50_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride51_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride52_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride53_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride54_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride55_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride56_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride57_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride58_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride59_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride60_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride61_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride62_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride63_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverride64_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GdExportPaletteOverridePanel_Paint(object sender, PaintEventArgs e)
+		{
+			PaintExportPalette();
 		}
 
 		private void removeDuplicateBlocksToolStripButton_Click(object sender, EventArgs e)

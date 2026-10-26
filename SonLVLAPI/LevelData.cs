@@ -675,7 +675,7 @@ namespace SonicRetro.SonLVL.API
 		{
 			PalName = new List<string>();
 			Palette = new List<SonLVLColor[,]>();
-			GdExportPalette = new SonLVLColor[16,4]();
+			GdExportPalette = new SonLVLColor[4,16];
 			PalNum = new List<byte[,]>();
 			PalAddr = new List<int[,]>();
 			if (Level.Palette == null || string.IsNullOrWhiteSpace(Level.Palette[0].Filename))
@@ -708,12 +708,12 @@ namespace SonicRetro.SonLVL.API
 				if (Level.GdExportOverridePaletteOverrides[palnum])
 				{
 					SonLVLColor col = new SonLVLColor();
-					col.MDColor = Level.GdExportOverridePaletteColors[palnum / 16, palnum % 4];
-					GdExportPalette[palnum / 16, palnum % 4] = col;
+					col.MDColor = Level.GdExportOverridePaletteColors[palnum];
+					GdExportPalette[palnum / 16, palnum % 16] = col;
 				}
 				else
 				{
-					GdExportPalette[palnum / 16, palnum % 4] = Palette[0][palnum / 16, palnum % 4];
+					GdExportPalette[palnum / 16, palnum % 16] = Palette[0][palnum / 16, palnum % 16];
 				}
 			}
 		}
@@ -2331,6 +2331,11 @@ namespace SonicRetro.SonLVL.API
 			if (acceptTransparent && index == 0)
 				return Color.Transparent;
 			return Palette[CurPal][line, index].RGBColor;
+		}
+
+		public static Color GdExportPaletteToColor(int line, int index)
+		{
+			return GdExportPalette[line, index].RGBColor;
 		}
 
 		public static void ColorToPalette(int line, int index, Color color)

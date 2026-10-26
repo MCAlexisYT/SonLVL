@@ -61,6 +61,9 @@ namespace SonicRetro.SonLVL.GUI
             System.Windows.Forms.Panel panel5;
             System.Windows.Forms.Panel panel9;
             System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+            System.Windows.Forms.Label label5;
+            System.Windows.Forms.Label label6;
+            System.Windows.Forms.Label label7;
             this.importChunksToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.drawChunkToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.deleteUnusedChunksToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -277,6 +280,78 @@ namespace SonicRetro.SonLVL.GUI
             this.TileSelector = new SonicRetro.SonLVL.API.TileList();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.CollisionSelector = new SonicRetro.SonLVL.API.TileList();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.GdExportPaletteOverridePanel = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GdExportPaletteOverride59 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride62 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride63 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride64 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride61 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride60 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride58 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride57 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride56 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride55 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride54 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride53 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride52 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride51 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride50 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride49 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride48 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride47 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride46 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride45 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride44 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride43 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride42 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride41 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride40 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride39 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride38 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride37 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride36 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride35 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride34 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride33 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride27 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride30 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride31 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride32 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride29 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride28 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride26 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride25 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride24 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride23 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride22 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride21 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride20 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride19 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride18 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride17 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride16 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride15 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride14 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride13 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride12 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride11 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride10 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride9 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride8 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride7 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride6 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride5 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride4 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride3 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride2 = new System.Windows.Forms.CheckBox();
+            this.GdExportPaletteOverride1 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.PalettePanel = new System.Windows.Forms.Panel();
@@ -363,6 +438,9 @@ namespace SonicRetro.SonLVL.GUI
             panel5 = new System.Windows.Forms.Panel();
             panel9 = new System.Windows.Forms.Panel();
             tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
             chunkListToolStrip.SuspendLayout();
             blockListToolStrip.SuspendLayout();
             tileListToolStrip.SuspendLayout();
@@ -424,6 +502,13 @@ namespace SonicRetro.SonLVL.GUI
             this.tabPage13.SuspendLayout();
             this.tabPage14.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel8.SuspendLayout();
             this.colorEditingPanel.SuspendLayout();
@@ -875,36 +960,36 @@ namespace SonicRetro.SonLVL.GUI
             // line0ToolStripMenuItem
             // 
             line0ToolStripMenuItem.Name = "line0ToolStripMenuItem";
-            line0ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            line0ToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             line0ToolStripMenuItem.Text = "Line &0";
             // 
             // line1ToolStripMenuItem
             // 
             line1ToolStripMenuItem.Name = "line1ToolStripMenuItem";
-            line1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            line1ToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             line1ToolStripMenuItem.Text = "Line &1";
             // 
             // line2ToolStripMenuItem
             // 
             line2ToolStripMenuItem.Name = "line2ToolStripMenuItem";
-            line2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            line2ToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             line2ToolStripMenuItem.Text = "Line &2";
             // 
             // line3ToolStripMenuItem
             // 
             line3ToolStripMenuItem.Name = "line3ToolStripMenuItem";
-            line3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            line3ToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             line3ToolStripMenuItem.Text = "Line &3";
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            toolStripSeparator2.Size = new System.Drawing.Size(102, 6);
             // 
             // fullToolStripMenuItem
             // 
             fullToolStripMenuItem.Name = "fullToolStripMenuItem";
-            fullToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            fullToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             fullToolStripMenuItem.Text = "&Full";
             // 
             // toolStripSeparator1
@@ -915,36 +1000,36 @@ namespace SonicRetro.SonLVL.GUI
             // line0ToolStripMenuItem1
             // 
             line0ToolStripMenuItem1.Name = "line0ToolStripMenuItem1";
-            line0ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            line0ToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             line0ToolStripMenuItem1.Text = "Line &0";
             // 
             // line1ToolStripMenuItem1
             // 
             line1ToolStripMenuItem1.Name = "line1ToolStripMenuItem1";
-            line1ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            line1ToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             line1ToolStripMenuItem1.Text = "Line &1";
             // 
             // line2ToolStripMenuItem1
             // 
             line2ToolStripMenuItem1.Name = "line2ToolStripMenuItem1";
-            line2ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            line2ToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             line2ToolStripMenuItem1.Text = "Line &2";
             // 
             // line3ToolStripMenuItem1
             // 
             line3ToolStripMenuItem1.Name = "line3ToolStripMenuItem1";
-            line3ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            line3ToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             line3ToolStripMenuItem1.Text = "Line &3";
             // 
             // toolStripSeparator13
             // 
             toolStripSeparator13.Name = "toolStripSeparator13";
-            toolStripSeparator13.Size = new System.Drawing.Size(177, 6);
+            toolStripSeparator13.Size = new System.Drawing.Size(102, 6);
             // 
             // fullToolStripMenuItem1
             // 
             fullToolStripMenuItem1.Name = "fullToolStripMenuItem1";
-            fullToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            fullToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             fullToolStripMenuItem1.Text = "&Full";
             // 
             // label1
@@ -1417,6 +1502,33 @@ namespace SonicRetro.SonLVL.GUI
             this.TilePicture.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TilePicture_MouseMove);
             this.TilePicture.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TilePicture_MouseUp);
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(5, 57);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(31, 13);
+            label5.TabIndex = 4;
+            label5.Text = "Blue:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(5, 31);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(39, 13);
+            label6.TabIndex = 2;
+            label6.Text = "Green:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(5, 5);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(30, 13);
+            label7.TabIndex = 0;
+            label7.Text = "Red:";
+            // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1446,7 +1558,7 @@ namespace SonicRetro.SonLVL.GUI
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.openToolStripMenuItem.Text = "&Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -1455,14 +1567,14 @@ namespace SonicRetro.SonLVL.GUI
             this.changeLevelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.noneToolStripMenuItem});
             this.changeLevelToolStripMenuItem.Name = "changeLevelToolStripMenuItem";
-            this.changeLevelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeLevelToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.changeLevelToolStripMenuItem.Text = "&Change Level...";
             // 
             // noneToolStripMenuItem
             // 
             this.noneToolStripMenuItem.Enabled = false;
             this.noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            this.noneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.noneToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.noneToolStripMenuItem.Text = "(none)";
             // 
             // saveToolStripMenuItem
@@ -1470,7 +1582,7 @@ namespace SonicRetro.SonLVL.GUI
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -1479,14 +1591,14 @@ namespace SonicRetro.SonLVL.GUI
             this.buildAndRunToolStripMenuItem.Enabled = false;
             this.buildAndRunToolStripMenuItem.Name = "buildAndRunToolStripMenuItem";
             this.buildAndRunToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.buildAndRunToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buildAndRunToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.buildAndRunToolStripMenuItem.Text = "&Build and Run...";
             this.buildAndRunToolStripMenuItem.Click += new System.EventHandler(this.buildAndRunToolStripMenuItem_Click);
             // 
             // setupEmulatorToolStripMenuItem
             // 
             this.setupEmulatorToolStripMenuItem.Name = "setupEmulatorToolStripMenuItem";
-            this.setupEmulatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setupEmulatorToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.setupEmulatorToolStripMenuItem.Text = "Setup E&mulator...";
             this.setupEmulatorToolStripMenuItem.Click += new System.EventHandler(this.setupEmulatorToolStripMenuItem_Click);
             // 
@@ -1495,7 +1607,7 @@ namespace SonicRetro.SonLVL.GUI
             this.recentProjectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.noneToolStripMenuItem2});
             this.recentProjectsToolStripMenuItem.Name = "recentProjectsToolStripMenuItem";
-            this.recentProjectsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.recentProjectsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.recentProjectsToolStripMenuItem.Text = "&Recent Projects";
             this.recentProjectsToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.recentProjectsToolStripMenuItem_DropDownItemClicked);
             // 
@@ -1503,14 +1615,14 @@ namespace SonicRetro.SonLVL.GUI
             // 
             this.noneToolStripMenuItem2.Enabled = false;
             this.noneToolStripMenuItem2.Name = "noneToolStripMenuItem2";
-            this.noneToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.noneToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
             this.noneToolStripMenuItem2.Text = "(none)";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeyDisplayString = "Alt+F4";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -1732,14 +1844,14 @@ namespace SonicRetro.SonLVL.GUI
             // selectPaletteToolStripMenuItem
             // 
             this.selectPaletteToolStripMenuItem.Name = "selectPaletteToolStripMenuItem";
-            this.selectPaletteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectPaletteToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.selectPaletteToolStripMenuItem.Text = "Select &Palette";
             this.selectPaletteToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.selectPaletteToolStripMenuItem_DropDownItemClicked);
             // 
             // setPositionToolStripMenuItem
             // 
             this.setPositionToolStripMenuItem.Name = "setPositionToolStripMenuItem";
-            this.setPositionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setPositionToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.setPositionToolStripMenuItem.Text = "Set P&osition...";
             this.setPositionToolStripMenuItem.Click += new System.EventHandler(this.setPositionToolStripMenuItem_Click);
             // 
@@ -1759,7 +1871,7 @@ namespace SonicRetro.SonLVL.GUI
             this.lowToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.lowToolStripMenuItem.Name = "lowToolStripMenuItem";
             this.lowToolStripMenuItem.ShortcutKeyDisplayString = "Y";
-            this.lowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lowToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.lowToolStripMenuItem.Text = "&Low";
             this.lowToolStripMenuItem.CheckedChanged += new System.EventHandler(this.lowToolStripMenuItem_CheckedChanged);
             this.lowToolStripMenuItem.Click += new System.EventHandler(this.lowToolStripMenuItem_Click);
@@ -1771,7 +1883,7 @@ namespace SonicRetro.SonLVL.GUI
             this.highToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.highToolStripMenuItem.Name = "highToolStripMenuItem";
             this.highToolStripMenuItem.ShortcutKeyDisplayString = "U";
-            this.highToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.highToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.highToolStripMenuItem.Text = "&High";
             this.highToolStripMenuItem.CheckedChanged += new System.EventHandler(this.highToolStripMenuItem_CheckedChanged);
             this.highToolStripMenuItem.Click += new System.EventHandler(this.highToolStripMenuItem_Click);
@@ -1795,34 +1907,34 @@ namespace SonicRetro.SonLVL.GUI
             this.noneToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.noneToolStripMenuItem1.Name = "noneToolStripMenuItem1";
             this.noneToolStripMenuItem1.ShortcutKeyDisplayString = "Q";
-            this.noneToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.noneToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.noneToolStripMenuItem1.Text = "&None";
             // 
             // path1ToolStripMenuItem
             // 
             this.path1ToolStripMenuItem.Name = "path1ToolStripMenuItem";
             this.path1ToolStripMenuItem.ShortcutKeyDisplayString = "W";
-            this.path1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.path1ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.path1ToolStripMenuItem.Text = "Path &1";
             // 
             // path2ToolStripMenuItem
             // 
             this.path2ToolStripMenuItem.Name = "path2ToolStripMenuItem";
             this.path2ToolStripMenuItem.ShortcutKeyDisplayString = "E";
-            this.path2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.path2ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.path2ToolStripMenuItem.Text = "Path &2";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(122, 6);
             // 
             // anglesToolStripMenuItem
             // 
             this.anglesToolStripMenuItem.CheckOnClick = true;
             this.anglesToolStripMenuItem.Name = "anglesToolStripMenuItem";
             this.anglesToolStripMenuItem.ShortcutKeyDisplayString = "R";
-            this.anglesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anglesToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.anglesToolStripMenuItem.Text = "Angles";
             // 
             // timeZoneToolStripMenuItem
@@ -1841,14 +1953,14 @@ namespace SonicRetro.SonLVL.GUI
             this.currentOnlyToolStripMenuItem.Checked = true;
             this.currentOnlyToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.currentOnlyToolStripMenuItem.Name = "currentOnlyToolStripMenuItem";
-            this.currentOnlyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.currentOnlyToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.currentOnlyToolStripMenuItem.Text = "&Current Only";
             this.currentOnlyToolStripMenuItem.Click += new System.EventHandler(this.currentOnlyToolStripMenuItem_Click);
             // 
             // allToolStripMenuItem
             // 
             this.allToolStripMenuItem.Name = "allToolStripMenuItem";
-            this.allToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.allToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.allToolStripMenuItem.Text = "&All";
             this.allToolStripMenuItem.Click += new System.EventHandler(this.allToolStripMenuItem_Click);
             // 
@@ -1866,13 +1978,13 @@ namespace SonicRetro.SonLVL.GUI
             this.enableGridToolStripMenuItem.CheckOnClick = true;
             this.enableGridToolStripMenuItem.Name = "enableGridToolStripMenuItem";
             this.enableGridToolStripMenuItem.ShortcutKeyDisplayString = "I";
-            this.enableGridToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enableGridToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.enableGridToolStripMenuItem.Text = "&Enable";
             // 
             // gridColorToolStripMenuItem
             // 
             this.gridColorToolStripMenuItem.Name = "gridColorToolStripMenuItem";
-            this.gridColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gridColorToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.gridColorToolStripMenuItem.Text = "&Color...";
             this.gridColorToolStripMenuItem.Click += new System.EventHandler(this.gridColorToolStripMenuItem_Click);
             // 
@@ -1896,19 +2008,19 @@ namespace SonicRetro.SonLVL.GUI
             // xToolStripMenuItem7
             // 
             this.xToolStripMenuItem7.Name = "xToolStripMenuItem7";
-            this.xToolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem7.Size = new System.Drawing.Size(96, 22);
             this.xToolStripMenuItem7.Text = "1/8x";
             // 
             // xToolStripMenuItem6
             // 
             this.xToolStripMenuItem6.Name = "xToolStripMenuItem6";
-            this.xToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem6.Size = new System.Drawing.Size(96, 22);
             this.xToolStripMenuItem6.Text = "1/4x";
             // 
             // xToolStripMenuItem
             // 
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.xToolStripMenuItem.Text = "1/2x";
             // 
             // xToolStripMenuItem1
@@ -1916,31 +2028,31 @@ namespace SonicRetro.SonLVL.GUI
             this.xToolStripMenuItem1.Checked = true;
             this.xToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.xToolStripMenuItem1.Name = "xToolStripMenuItem1";
-            this.xToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem1.Size = new System.Drawing.Size(96, 22);
             this.xToolStripMenuItem1.Text = "1x";
             // 
             // xToolStripMenuItem2
             // 
             this.xToolStripMenuItem2.Name = "xToolStripMenuItem2";
-            this.xToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem2.Size = new System.Drawing.Size(96, 22);
             this.xToolStripMenuItem2.Text = "2x";
             // 
             // xToolStripMenuItem3
             // 
             this.xToolStripMenuItem3.Name = "xToolStripMenuItem3";
-            this.xToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem3.Size = new System.Drawing.Size(96, 22);
             this.xToolStripMenuItem3.Text = "3x";
             // 
             // xToolStripMenuItem4
             // 
             this.xToolStripMenuItem4.Name = "xToolStripMenuItem4";
-            this.xToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem4.Size = new System.Drawing.Size(96, 22);
             this.xToolStripMenuItem4.Text = "4x";
             // 
             // xToolStripMenuItem5
             // 
             this.xToolStripMenuItem5.Name = "xToolStripMenuItem5";
-            this.xToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.xToolStripMenuItem5.Size = new System.Drawing.Size(96, 22);
             this.xToolStripMenuItem5.Text = "5x";
             // 
             // toolStripSeparator4
@@ -2003,14 +2115,14 @@ namespace SonicRetro.SonLVL.GUI
             toolStripSeparator2,
             fullToolStripMenuItem});
             this.pNGToolStripMenuItem.Name = "pNGToolStripMenuItem";
-            this.pNGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pNGToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.pNGToolStripMenuItem.Text = "&PNG";
             this.pNGToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.pNGToolStripMenuItem_DropDownItemClicked);
             // 
             // yYCHRToolStripMenuItem
             // 
             this.yYCHRToolStripMenuItem.Name = "yYCHRToolStripMenuItem";
-            this.yYCHRToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yYCHRToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.yYCHRToolStripMenuItem.Text = "&YY-CHR";
             this.yYCHRToolStripMenuItem.Click += new System.EventHandler(this.yYCHRToolStripMenuItem_Click);
             // 
@@ -2024,7 +2136,7 @@ namespace SonicRetro.SonLVL.GUI
             toolStripSeparator13,
             fullToolStripMenuItem1});
             this.jASCPALToolStripMenuItem.Name = "jASCPALToolStripMenuItem";
-            this.jASCPALToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jASCPALToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.jASCPALToolStripMenuItem.Text = "JASC-PAL";
             this.jASCPALToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.jASCPALToolStripMenuItem_DropDownItemClicked);
             // 
@@ -2043,25 +2155,25 @@ namespace SonicRetro.SonLVL.GUI
             // paletteLine0ToolStripMenuItem
             // 
             this.paletteLine0ToolStripMenuItem.Name = "paletteLine0ToolStripMenuItem";
-            this.paletteLine0ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.paletteLine0ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.paletteLine0ToolStripMenuItem.Text = "Palette line &0";
             // 
             // paletteLine1ToolStripMenuItem
             // 
             this.paletteLine1ToolStripMenuItem.Name = "paletteLine1ToolStripMenuItem";
-            this.paletteLine1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.paletteLine1ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.paletteLine1ToolStripMenuItem.Text = "Palette line &1";
             // 
             // paletteLine2ToolStripMenuItem
             // 
             this.paletteLine2ToolStripMenuItem.Name = "paletteLine2ToolStripMenuItem";
-            this.paletteLine2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.paletteLine2ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.paletteLine2ToolStripMenuItem.Text = "Palette line &2";
             // 
             // paletteLine3ToolStripMenuItem
             // 
             this.paletteLine3ToolStripMenuItem.Name = "paletteLine3ToolStripMenuItem";
-            this.paletteLine3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.paletteLine3ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.paletteLine3ToolStripMenuItem.Text = "Palette line &3";
             // 
             // blocksToolStripMenuItem
@@ -2111,14 +2223,14 @@ namespace SonicRetro.SonLVL.GUI
             // exportToolStripMenuItem1
             // 
             this.exportToolStripMenuItem1.Name = "exportToolStripMenuItem1";
-            this.exportToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exportToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.exportToolStripMenuItem1.Text = "Export";
             this.exportToolStripMenuItem1.Click += new System.EventHandler(this.exportToolStripMenuItem1_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // transparentBackgroundToolStripMenuItem
@@ -2160,14 +2272,14 @@ namespace SonicRetro.SonLVL.GUI
             // 
             this.viewReadmeToolStripMenuItem.Name = "viewReadmeToolStripMenuItem";
             this.viewReadmeToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.viewReadmeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewReadmeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.viewReadmeToolStripMenuItem.Text = "View &Readme";
             this.viewReadmeToolStripMenuItem.Click += new System.EventHandler(this.viewReadmeToolStripMenuItem_Click);
             // 
             // reportBugToolStripMenuItem
             // 
             this.reportBugToolStripMenuItem.Name = "reportBugToolStripMenuItem";
-            this.reportBugToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportBugToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.reportBugToolStripMenuItem.Text = "Report &Bug...";
             this.reportBugToolStripMenuItem.Click += new System.EventHandler(this.reportBugToolStripMenuItem_Click);
             // 
@@ -2299,6 +2411,7 @@ namespace SonicRetro.SonLVL.GUI
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 129);
             this.tabControl1.Multiline = true;
@@ -3017,6 +3130,788 @@ namespace SonicRetro.SonLVL.GUI
             this.CollisionSelector.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CollisionSelector_KeyDown);
             this.CollisionSelector.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CollisionSelector_MouseDown);
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.groupBox2);
+            this.tabPage6.Controls.Add(this.groupBox1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(650, 372);
+            this.tabPage6.TabIndex = 4;
+            this.tabPage6.Text = "Export Palette";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel4);
+            this.groupBox2.Controls.Add(this.GdExportPaletteOverridePanel);
+            this.groupBox2.Location = new System.Drawing.Point(8, 109);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(449, 107);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // panel4
+            // 
+            this.panel4.AutoSize = true;
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel4.Controls.Add(this.numericUpDown1);
+            this.panel4.Controls.Add(label5);
+            this.panel4.Controls.Add(this.numericUpDown2);
+            this.panel4.Controls.Add(label6);
+            this.panel4.Controls.Add(this.numericUpDown3);
+            this.panel4.Controls.Add(label7);
+            this.panel4.Enabled = false;
+            this.panel4.Location = new System.Drawing.Point(335, 16);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(106, 78);
+            this.panel4.TabIndex = 6;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(50, 55);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDown1.TabIndex = 5;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(50, 29);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDown2.TabIndex = 3;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(50, 3);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDown3.TabIndex = 1;
+            // 
+            // GdExportPaletteOverridePanel
+            // 
+            this.GdExportPaletteOverridePanel.Location = new System.Drawing.Point(6, 16);
+            this.GdExportPaletteOverridePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.GdExportPaletteOverridePanel.Name = "GdExportPaletteOverridePanel";
+            this.GdExportPaletteOverridePanel.Size = new System.Drawing.Size(320, 80);
+            this.GdExportPaletteOverridePanel.TabIndex = 1;
+            this.GdExportPaletteOverridePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.GdExportPaletteOverridePanel_Paint);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride59);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride62);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride63);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride64);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride61);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride60);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride58);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride57);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride56);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride55);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride54);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride53);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride52);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride51);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride50);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride49);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride48);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride47);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride46);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride45);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride44);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride43);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride42);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride41);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride40);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride39);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride38);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride37);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride36);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride35);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride34);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride33);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride27);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride30);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride31);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride32);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride29);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride28);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride26);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride25);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride24);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride23);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride22);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride21);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride20);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride19);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride18);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride17);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride16);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride15);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride14);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride13);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride12);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride11);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride10);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride9);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride8);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride7);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride6);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride5);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride4);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride3);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride2);
+            this.groupBox1.Controls.Add(this.GdExportPaletteOverride1);
+            this.groupBox1.Location = new System.Drawing.Point(8, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(345, 100);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // GdExportPaletteOverride59
+            // 
+            this.GdExportPaletteOverride59.AutoSize = true;
+            this.GdExportPaletteOverride59.Location = new System.Drawing.Point(216, 80);
+            this.GdExportPaletteOverride59.Name = "GdExportPaletteOverride59";
+            this.GdExportPaletteOverride59.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride59.TabIndex = 64;
+            this.GdExportPaletteOverride59.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride59.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride59_CheckedChanged);
+            // 
+            // GdExportPaletteOverride62
+            // 
+            this.GdExportPaletteOverride62.AutoSize = true;
+            this.GdExportPaletteOverride62.Location = new System.Drawing.Point(279, 80);
+            this.GdExportPaletteOverride62.Name = "GdExportPaletteOverride62";
+            this.GdExportPaletteOverride62.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride62.TabIndex = 63;
+            this.GdExportPaletteOverride62.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride62.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride62_CheckedChanged);
+            // 
+            // GdExportPaletteOverride63
+            // 
+            this.GdExportPaletteOverride63.AutoSize = true;
+            this.GdExportPaletteOverride63.Location = new System.Drawing.Point(300, 80);
+            this.GdExportPaletteOverride63.Name = "GdExportPaletteOverride63";
+            this.GdExportPaletteOverride63.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride63.TabIndex = 62;
+            this.GdExportPaletteOverride63.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride63.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride63_CheckedChanged);
+            // 
+            // GdExportPaletteOverride64
+            // 
+            this.GdExportPaletteOverride64.AutoSize = true;
+            this.GdExportPaletteOverride64.Location = new System.Drawing.Point(321, 80);
+            this.GdExportPaletteOverride64.Name = "GdExportPaletteOverride64";
+            this.GdExportPaletteOverride64.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride64.TabIndex = 61;
+            this.GdExportPaletteOverride64.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride64.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride64_CheckedChanged);
+            // 
+            // GdExportPaletteOverride61
+            // 
+            this.GdExportPaletteOverride61.AutoSize = true;
+            this.GdExportPaletteOverride61.Location = new System.Drawing.Point(258, 80);
+            this.GdExportPaletteOverride61.Name = "GdExportPaletteOverride61";
+            this.GdExportPaletteOverride61.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride61.TabIndex = 60;
+            this.GdExportPaletteOverride61.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride61.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride61_CheckedChanged);
+            // 
+            // GdExportPaletteOverride60
+            // 
+            this.GdExportPaletteOverride60.AutoSize = true;
+            this.GdExportPaletteOverride60.Location = new System.Drawing.Point(237, 80);
+            this.GdExportPaletteOverride60.Name = "GdExportPaletteOverride60";
+            this.GdExportPaletteOverride60.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride60.TabIndex = 59;
+            this.GdExportPaletteOverride60.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride60.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride60_CheckedChanged);
+            // 
+            // GdExportPaletteOverride58
+            // 
+            this.GdExportPaletteOverride58.AutoSize = true;
+            this.GdExportPaletteOverride58.Location = new System.Drawing.Point(195, 80);
+            this.GdExportPaletteOverride58.Name = "GdExportPaletteOverride58";
+            this.GdExportPaletteOverride58.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride58.TabIndex = 58;
+            this.GdExportPaletteOverride58.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride58.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride58_CheckedChanged);
+            // 
+            // GdExportPaletteOverride57
+            // 
+            this.GdExportPaletteOverride57.AutoSize = true;
+            this.GdExportPaletteOverride57.Location = new System.Drawing.Point(174, 80);
+            this.GdExportPaletteOverride57.Name = "GdExportPaletteOverride57";
+            this.GdExportPaletteOverride57.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride57.TabIndex = 57;
+            this.GdExportPaletteOverride57.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride57.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride57_CheckedChanged);
+            // 
+            // GdExportPaletteOverride56
+            // 
+            this.GdExportPaletteOverride56.AutoSize = true;
+            this.GdExportPaletteOverride56.Location = new System.Drawing.Point(153, 80);
+            this.GdExportPaletteOverride56.Name = "GdExportPaletteOverride56";
+            this.GdExportPaletteOverride56.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride56.TabIndex = 56;
+            this.GdExportPaletteOverride56.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride56.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride56_CheckedChanged);
+            // 
+            // GdExportPaletteOverride55
+            // 
+            this.GdExportPaletteOverride55.AutoSize = true;
+            this.GdExportPaletteOverride55.Location = new System.Drawing.Point(132, 80);
+            this.GdExportPaletteOverride55.Name = "GdExportPaletteOverride55";
+            this.GdExportPaletteOverride55.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride55.TabIndex = 55;
+            this.GdExportPaletteOverride55.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride55.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride55_CheckedChanged);
+            // 
+            // GdExportPaletteOverride54
+            // 
+            this.GdExportPaletteOverride54.AutoSize = true;
+            this.GdExportPaletteOverride54.Location = new System.Drawing.Point(111, 80);
+            this.GdExportPaletteOverride54.Name = "GdExportPaletteOverride54";
+            this.GdExportPaletteOverride54.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride54.TabIndex = 54;
+            this.GdExportPaletteOverride54.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride54.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride54_CheckedChanged);
+            // 
+            // GdExportPaletteOverride53
+            // 
+            this.GdExportPaletteOverride53.AutoSize = true;
+            this.GdExportPaletteOverride53.Location = new System.Drawing.Point(90, 80);
+            this.GdExportPaletteOverride53.Name = "GdExportPaletteOverride53";
+            this.GdExportPaletteOverride53.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride53.TabIndex = 53;
+            this.GdExportPaletteOverride53.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride53.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride53_CheckedChanged);
+            // 
+            // GdExportPaletteOverride52
+            // 
+            this.GdExportPaletteOverride52.AutoSize = true;
+            this.GdExportPaletteOverride52.Location = new System.Drawing.Point(69, 80);
+            this.GdExportPaletteOverride52.Name = "GdExportPaletteOverride52";
+            this.GdExportPaletteOverride52.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride52.TabIndex = 52;
+            this.GdExportPaletteOverride52.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride52.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride52_CheckedChanged);
+            // 
+            // GdExportPaletteOverride51
+            // 
+            this.GdExportPaletteOverride51.AutoSize = true;
+            this.GdExportPaletteOverride51.Location = new System.Drawing.Point(48, 80);
+            this.GdExportPaletteOverride51.Name = "GdExportPaletteOverride51";
+            this.GdExportPaletteOverride51.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride51.TabIndex = 51;
+            this.GdExportPaletteOverride51.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride51.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride51_CheckedChanged);
+            // 
+            // GdExportPaletteOverride50
+            // 
+            this.GdExportPaletteOverride50.AutoSize = true;
+            this.GdExportPaletteOverride50.Location = new System.Drawing.Point(27, 80);
+            this.GdExportPaletteOverride50.Name = "GdExportPaletteOverride50";
+            this.GdExportPaletteOverride50.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride50.TabIndex = 50;
+            this.GdExportPaletteOverride50.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride50.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride50_CheckedChanged);
+            // 
+            // GdExportPaletteOverride49
+            // 
+            this.GdExportPaletteOverride49.AutoSize = true;
+            this.GdExportPaletteOverride49.Location = new System.Drawing.Point(6, 80);
+            this.GdExportPaletteOverride49.Name = "GdExportPaletteOverride49";
+            this.GdExportPaletteOverride49.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride49.TabIndex = 49;
+            this.GdExportPaletteOverride49.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride49.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride49_CheckedChanged);
+            // 
+            // GdExportPaletteOverride48
+            // 
+            this.GdExportPaletteOverride48.AutoSize = true;
+            this.GdExportPaletteOverride48.Location = new System.Drawing.Point(321, 60);
+            this.GdExportPaletteOverride48.Name = "GdExportPaletteOverride48";
+            this.GdExportPaletteOverride48.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride48.TabIndex = 48;
+            this.GdExportPaletteOverride48.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride48.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride48_CheckedChanged);
+            // 
+            // GdExportPaletteOverride47
+            // 
+            this.GdExportPaletteOverride47.AutoSize = true;
+            this.GdExportPaletteOverride47.Location = new System.Drawing.Point(300, 60);
+            this.GdExportPaletteOverride47.Name = "GdExportPaletteOverride47";
+            this.GdExportPaletteOverride47.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride47.TabIndex = 47;
+            this.GdExportPaletteOverride47.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride47.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride47_CheckedChanged);
+            // 
+            // GdExportPaletteOverride46
+            // 
+            this.GdExportPaletteOverride46.AutoSize = true;
+            this.GdExportPaletteOverride46.Location = new System.Drawing.Point(279, 60);
+            this.GdExportPaletteOverride46.Name = "GdExportPaletteOverride46";
+            this.GdExportPaletteOverride46.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride46.TabIndex = 46;
+            this.GdExportPaletteOverride46.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride46.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride46_CheckedChanged);
+            // 
+            // GdExportPaletteOverride45
+            // 
+            this.GdExportPaletteOverride45.AutoSize = true;
+            this.GdExportPaletteOverride45.Location = new System.Drawing.Point(258, 60);
+            this.GdExportPaletteOverride45.Name = "GdExportPaletteOverride45";
+            this.GdExportPaletteOverride45.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride45.TabIndex = 45;
+            this.GdExportPaletteOverride45.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride45.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride45_CheckedChanged);
+            // 
+            // GdExportPaletteOverride44
+            // 
+            this.GdExportPaletteOverride44.AutoSize = true;
+            this.GdExportPaletteOverride44.Location = new System.Drawing.Point(237, 60);
+            this.GdExportPaletteOverride44.Name = "GdExportPaletteOverride44";
+            this.GdExportPaletteOverride44.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride44.TabIndex = 44;
+            this.GdExportPaletteOverride44.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride44.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride44_CheckedChanged);
+            // 
+            // GdExportPaletteOverride43
+            // 
+            this.GdExportPaletteOverride43.AutoSize = true;
+            this.GdExportPaletteOverride43.Location = new System.Drawing.Point(216, 60);
+            this.GdExportPaletteOverride43.Name = "GdExportPaletteOverride43";
+            this.GdExportPaletteOverride43.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride43.TabIndex = 43;
+            this.GdExportPaletteOverride43.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride43.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride43_CheckedChanged);
+            // 
+            // GdExportPaletteOverride42
+            // 
+            this.GdExportPaletteOverride42.AutoSize = true;
+            this.GdExportPaletteOverride42.Location = new System.Drawing.Point(195, 60);
+            this.GdExportPaletteOverride42.Name = "GdExportPaletteOverride42";
+            this.GdExportPaletteOverride42.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride42.TabIndex = 42;
+            this.GdExportPaletteOverride42.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride42.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride42_CheckedChanged);
+            // 
+            // GdExportPaletteOverride41
+            // 
+            this.GdExportPaletteOverride41.AutoSize = true;
+            this.GdExportPaletteOverride41.Location = new System.Drawing.Point(174, 60);
+            this.GdExportPaletteOverride41.Name = "GdExportPaletteOverride41";
+            this.GdExportPaletteOverride41.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride41.TabIndex = 41;
+            this.GdExportPaletteOverride41.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride41.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride41_CheckedChanged);
+            // 
+            // GdExportPaletteOverride40
+            // 
+            this.GdExportPaletteOverride40.AutoSize = true;
+            this.GdExportPaletteOverride40.Location = new System.Drawing.Point(153, 60);
+            this.GdExportPaletteOverride40.Name = "GdExportPaletteOverride40";
+            this.GdExportPaletteOverride40.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride40.TabIndex = 40;
+            this.GdExportPaletteOverride40.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride40.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride40_CheckedChanged);
+            // 
+            // GdExportPaletteOverride39
+            // 
+            this.GdExportPaletteOverride39.AutoSize = true;
+            this.GdExportPaletteOverride39.Location = new System.Drawing.Point(132, 60);
+            this.GdExportPaletteOverride39.Name = "GdExportPaletteOverride39";
+            this.GdExportPaletteOverride39.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride39.TabIndex = 39;
+            this.GdExportPaletteOverride39.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride39.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride39_CheckedChanged);
+            // 
+            // GdExportPaletteOverride38
+            // 
+            this.GdExportPaletteOverride38.AutoSize = true;
+            this.GdExportPaletteOverride38.Location = new System.Drawing.Point(111, 60);
+            this.GdExportPaletteOverride38.Name = "GdExportPaletteOverride38";
+            this.GdExportPaletteOverride38.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride38.TabIndex = 38;
+            this.GdExportPaletteOverride38.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride38.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride38_CheckedChanged);
+            // 
+            // GdExportPaletteOverride37
+            // 
+            this.GdExportPaletteOverride37.AutoSize = true;
+            this.GdExportPaletteOverride37.Location = new System.Drawing.Point(90, 60);
+            this.GdExportPaletteOverride37.Name = "GdExportPaletteOverride37";
+            this.GdExportPaletteOverride37.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride37.TabIndex = 37;
+            this.GdExportPaletteOverride37.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride37.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride37_CheckedChanged);
+            // 
+            // GdExportPaletteOverride36
+            // 
+            this.GdExportPaletteOverride36.AutoSize = true;
+            this.GdExportPaletteOverride36.Location = new System.Drawing.Point(69, 60);
+            this.GdExportPaletteOverride36.Name = "GdExportPaletteOverride36";
+            this.GdExportPaletteOverride36.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride36.TabIndex = 36;
+            this.GdExportPaletteOverride36.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride36.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride36_CheckedChanged);
+            // 
+            // GdExportPaletteOverride35
+            // 
+            this.GdExportPaletteOverride35.AutoSize = true;
+            this.GdExportPaletteOverride35.Location = new System.Drawing.Point(48, 60);
+            this.GdExportPaletteOverride35.Name = "GdExportPaletteOverride35";
+            this.GdExportPaletteOverride35.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride35.TabIndex = 35;
+            this.GdExportPaletteOverride35.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride35.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride35_CheckedChanged);
+            // 
+            // GdExportPaletteOverride34
+            // 
+            this.GdExportPaletteOverride34.AutoSize = true;
+            this.GdExportPaletteOverride34.Location = new System.Drawing.Point(27, 60);
+            this.GdExportPaletteOverride34.Name = "GdExportPaletteOverride34";
+            this.GdExportPaletteOverride34.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride34.TabIndex = 34;
+            this.GdExportPaletteOverride34.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride34.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride34_CheckedChanged);
+            // 
+            // GdExportPaletteOverride33
+            // 
+            this.GdExportPaletteOverride33.AutoSize = true;
+            this.GdExportPaletteOverride33.Location = new System.Drawing.Point(6, 60);
+            this.GdExportPaletteOverride33.Name = "GdExportPaletteOverride33";
+            this.GdExportPaletteOverride33.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride33.TabIndex = 33;
+            this.GdExportPaletteOverride33.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride33.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride33_CheckedChanged);
+            // 
+            // GdExportPaletteOverride27
+            // 
+            this.GdExportPaletteOverride27.AutoSize = true;
+            this.GdExportPaletteOverride27.Location = new System.Drawing.Point(216, 39);
+            this.GdExportPaletteOverride27.Name = "GdExportPaletteOverride27";
+            this.GdExportPaletteOverride27.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride27.TabIndex = 32;
+            this.GdExportPaletteOverride27.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride27.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride27_CheckedChanged);
+            // 
+            // GdExportPaletteOverride30
+            // 
+            this.GdExportPaletteOverride30.AutoSize = true;
+            this.GdExportPaletteOverride30.Location = new System.Drawing.Point(279, 39);
+            this.GdExportPaletteOverride30.Name = "GdExportPaletteOverride30";
+            this.GdExportPaletteOverride30.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride30.TabIndex = 31;
+            this.GdExportPaletteOverride30.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride30.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride30_CheckedChanged);
+            // 
+            // GdExportPaletteOverride31
+            // 
+            this.GdExportPaletteOverride31.AutoSize = true;
+            this.GdExportPaletteOverride31.Location = new System.Drawing.Point(300, 39);
+            this.GdExportPaletteOverride31.Name = "GdExportPaletteOverride31";
+            this.GdExportPaletteOverride31.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride31.TabIndex = 30;
+            this.GdExportPaletteOverride31.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride31.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride31_CheckedChanged);
+            // 
+            // GdExportPaletteOverride32
+            // 
+            this.GdExportPaletteOverride32.AutoSize = true;
+            this.GdExportPaletteOverride32.Location = new System.Drawing.Point(321, 39);
+            this.GdExportPaletteOverride32.Name = "GdExportPaletteOverride32";
+            this.GdExportPaletteOverride32.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride32.TabIndex = 29;
+            this.GdExportPaletteOverride32.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride32.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride32_CheckedChanged);
+            // 
+            // GdExportPaletteOverride29
+            // 
+            this.GdExportPaletteOverride29.AutoSize = true;
+            this.GdExportPaletteOverride29.Location = new System.Drawing.Point(258, 39);
+            this.GdExportPaletteOverride29.Name = "GdExportPaletteOverride29";
+            this.GdExportPaletteOverride29.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride29.TabIndex = 28;
+            this.GdExportPaletteOverride29.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride29.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride29_CheckedChanged);
+            // 
+            // GdExportPaletteOverride28
+            // 
+            this.GdExportPaletteOverride28.AutoSize = true;
+            this.GdExportPaletteOverride28.Location = new System.Drawing.Point(237, 39);
+            this.GdExportPaletteOverride28.Name = "GdExportPaletteOverride28";
+            this.GdExportPaletteOverride28.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride28.TabIndex = 27;
+            this.GdExportPaletteOverride28.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride28.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride28_CheckedChanged);
+            // 
+            // GdExportPaletteOverride26
+            // 
+            this.GdExportPaletteOverride26.AutoSize = true;
+            this.GdExportPaletteOverride26.Location = new System.Drawing.Point(195, 39);
+            this.GdExportPaletteOverride26.Name = "GdExportPaletteOverride26";
+            this.GdExportPaletteOverride26.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride26.TabIndex = 26;
+            this.GdExportPaletteOverride26.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride26.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride26_CheckedChanged);
+            // 
+            // GdExportPaletteOverride25
+            // 
+            this.GdExportPaletteOverride25.AutoSize = true;
+            this.GdExportPaletteOverride25.Location = new System.Drawing.Point(174, 39);
+            this.GdExportPaletteOverride25.Name = "GdExportPaletteOverride25";
+            this.GdExportPaletteOverride25.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride25.TabIndex = 25;
+            this.GdExportPaletteOverride25.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride25.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride25_CheckedChanged);
+            // 
+            // GdExportPaletteOverride24
+            // 
+            this.GdExportPaletteOverride24.AutoSize = true;
+            this.GdExportPaletteOverride24.Location = new System.Drawing.Point(153, 39);
+            this.GdExportPaletteOverride24.Name = "GdExportPaletteOverride24";
+            this.GdExportPaletteOverride24.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride24.TabIndex = 24;
+            this.GdExportPaletteOverride24.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride24.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride24_CheckedChanged);
+            // 
+            // GdExportPaletteOverride23
+            // 
+            this.GdExportPaletteOverride23.AutoSize = true;
+            this.GdExportPaletteOverride23.Location = new System.Drawing.Point(132, 39);
+            this.GdExportPaletteOverride23.Name = "GdExportPaletteOverride23";
+            this.GdExportPaletteOverride23.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride23.TabIndex = 23;
+            this.GdExportPaletteOverride23.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride23.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride23_CheckedChanged);
+            // 
+            // GdExportPaletteOverride22
+            // 
+            this.GdExportPaletteOverride22.AutoSize = true;
+            this.GdExportPaletteOverride22.Location = new System.Drawing.Point(111, 39);
+            this.GdExportPaletteOverride22.Name = "GdExportPaletteOverride22";
+            this.GdExportPaletteOverride22.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride22.TabIndex = 22;
+            this.GdExportPaletteOverride22.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride22.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride22_CheckedChanged);
+            // 
+            // GdExportPaletteOverride21
+            // 
+            this.GdExportPaletteOverride21.AutoSize = true;
+            this.GdExportPaletteOverride21.Location = new System.Drawing.Point(90, 39);
+            this.GdExportPaletteOverride21.Name = "GdExportPaletteOverride21";
+            this.GdExportPaletteOverride21.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride21.TabIndex = 21;
+            this.GdExportPaletteOverride21.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride21.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride21_CheckedChanged);
+            // 
+            // GdExportPaletteOverride20
+            // 
+            this.GdExportPaletteOverride20.AutoSize = true;
+            this.GdExportPaletteOverride20.Location = new System.Drawing.Point(69, 39);
+            this.GdExportPaletteOverride20.Name = "GdExportPaletteOverride20";
+            this.GdExportPaletteOverride20.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride20.TabIndex = 20;
+            this.GdExportPaletteOverride20.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride20.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride20_CheckedChanged);
+            // 
+            // GdExportPaletteOverride19
+            // 
+            this.GdExportPaletteOverride19.AutoSize = true;
+            this.GdExportPaletteOverride19.Location = new System.Drawing.Point(48, 39);
+            this.GdExportPaletteOverride19.Name = "GdExportPaletteOverride19";
+            this.GdExportPaletteOverride19.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride19.TabIndex = 19;
+            this.GdExportPaletteOverride19.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride19.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride19_CheckedChanged);
+            // 
+            // GdExportPaletteOverride18
+            // 
+            this.GdExportPaletteOverride18.AutoSize = true;
+            this.GdExportPaletteOverride18.Location = new System.Drawing.Point(27, 39);
+            this.GdExportPaletteOverride18.Name = "GdExportPaletteOverride18";
+            this.GdExportPaletteOverride18.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride18.TabIndex = 18;
+            this.GdExportPaletteOverride18.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride18.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride18_CheckedChanged);
+            // 
+            // GdExportPaletteOverride17
+            // 
+            this.GdExportPaletteOverride17.AutoSize = true;
+            this.GdExportPaletteOverride17.Location = new System.Drawing.Point(6, 39);
+            this.GdExportPaletteOverride17.Name = "GdExportPaletteOverride17";
+            this.GdExportPaletteOverride17.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride17.TabIndex = 17;
+            this.GdExportPaletteOverride17.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride17.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride17_CheckedChanged);
+            // 
+            // GdExportPaletteOverride16
+            // 
+            this.GdExportPaletteOverride16.AutoSize = true;
+            this.GdExportPaletteOverride16.Location = new System.Drawing.Point(321, 19);
+            this.GdExportPaletteOverride16.Name = "GdExportPaletteOverride16";
+            this.GdExportPaletteOverride16.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride16.TabIndex = 16;
+            this.GdExportPaletteOverride16.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride16.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride16_CheckedChanged);
+            // 
+            // GdExportPaletteOverride15
+            // 
+            this.GdExportPaletteOverride15.AutoSize = true;
+            this.GdExportPaletteOverride15.Location = new System.Drawing.Point(300, 19);
+            this.GdExportPaletteOverride15.Name = "GdExportPaletteOverride15";
+            this.GdExportPaletteOverride15.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride15.TabIndex = 15;
+            this.GdExportPaletteOverride15.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride15.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride15_CheckedChanged);
+            // 
+            // GdExportPaletteOverride14
+            // 
+            this.GdExportPaletteOverride14.AutoSize = true;
+            this.GdExportPaletteOverride14.Location = new System.Drawing.Point(279, 19);
+            this.GdExportPaletteOverride14.Name = "GdExportPaletteOverride14";
+            this.GdExportPaletteOverride14.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride14.TabIndex = 14;
+            this.GdExportPaletteOverride14.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride14.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride14_CheckedChanged);
+            // 
+            // GdExportPaletteOverride13
+            // 
+            this.GdExportPaletteOverride13.AutoSize = true;
+            this.GdExportPaletteOverride13.Location = new System.Drawing.Point(258, 19);
+            this.GdExportPaletteOverride13.Name = "GdExportPaletteOverride13";
+            this.GdExportPaletteOverride13.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride13.TabIndex = 13;
+            this.GdExportPaletteOverride13.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride13.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride13_CheckedChanged);
+            // 
+            // GdExportPaletteOverride12
+            // 
+            this.GdExportPaletteOverride12.AutoSize = true;
+            this.GdExportPaletteOverride12.Location = new System.Drawing.Point(237, 19);
+            this.GdExportPaletteOverride12.Name = "GdExportPaletteOverride12";
+            this.GdExportPaletteOverride12.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride12.TabIndex = 12;
+            this.GdExportPaletteOverride12.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride12.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride12_CheckedChanged);
+            // 
+            // GdExportPaletteOverride11
+            // 
+            this.GdExportPaletteOverride11.AutoSize = true;
+            this.GdExportPaletteOverride11.Location = new System.Drawing.Point(216, 19);
+            this.GdExportPaletteOverride11.Name = "GdExportPaletteOverride11";
+            this.GdExportPaletteOverride11.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride11.TabIndex = 11;
+            this.GdExportPaletteOverride11.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride11.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride11_CheckedChanged);
+            // 
+            // GdExportPaletteOverride10
+            // 
+            this.GdExportPaletteOverride10.AutoSize = true;
+            this.GdExportPaletteOverride10.Location = new System.Drawing.Point(195, 19);
+            this.GdExportPaletteOverride10.Name = "GdExportPaletteOverride10";
+            this.GdExportPaletteOverride10.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride10.TabIndex = 10;
+            this.GdExportPaletteOverride10.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride10.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride10_CheckedChanged);
+            // 
+            // GdExportPaletteOverride9
+            // 
+            this.GdExportPaletteOverride9.AutoSize = true;
+            this.GdExportPaletteOverride9.Location = new System.Drawing.Point(174, 19);
+            this.GdExportPaletteOverride9.Name = "GdExportPaletteOverride9";
+            this.GdExportPaletteOverride9.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride9.TabIndex = 9;
+            this.GdExportPaletteOverride9.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride9.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride9_CheckedChanged);
+            // 
+            // GdExportPaletteOverride8
+            // 
+            this.GdExportPaletteOverride8.AutoSize = true;
+            this.GdExportPaletteOverride8.Location = new System.Drawing.Point(153, 19);
+            this.GdExportPaletteOverride8.Name = "GdExportPaletteOverride8";
+            this.GdExportPaletteOverride8.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride8.TabIndex = 8;
+            this.GdExportPaletteOverride8.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride8.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride8_CheckedChanged);
+            // 
+            // GdExportPaletteOverride7
+            // 
+            this.GdExportPaletteOverride7.AutoSize = true;
+            this.GdExportPaletteOverride7.Location = new System.Drawing.Point(132, 19);
+            this.GdExportPaletteOverride7.Name = "GdExportPaletteOverride7";
+            this.GdExportPaletteOverride7.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride7.TabIndex = 7;
+            this.GdExportPaletteOverride7.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride7.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride7_CheckedChanged);
+            // 
+            // GdExportPaletteOverride6
+            // 
+            this.GdExportPaletteOverride6.AutoSize = true;
+            this.GdExportPaletteOverride6.Location = new System.Drawing.Point(111, 19);
+            this.GdExportPaletteOverride6.Name = "GdExportPaletteOverride6";
+            this.GdExportPaletteOverride6.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride6.TabIndex = 6;
+            this.GdExportPaletteOverride6.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride6.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride6_CheckedChanged);
+            // 
+            // GdExportPaletteOverride5
+            // 
+            this.GdExportPaletteOverride5.AutoSize = true;
+            this.GdExportPaletteOverride5.Location = new System.Drawing.Point(90, 19);
+            this.GdExportPaletteOverride5.Name = "GdExportPaletteOverride5";
+            this.GdExportPaletteOverride5.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride5.TabIndex = 4;
+            this.GdExportPaletteOverride5.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride5.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride5_CheckedChanged);
+            // 
+            // GdExportPaletteOverride4
+            // 
+            this.GdExportPaletteOverride4.AutoSize = true;
+            this.GdExportPaletteOverride4.Location = new System.Drawing.Point(69, 19);
+            this.GdExportPaletteOverride4.Name = "GdExportPaletteOverride4";
+            this.GdExportPaletteOverride4.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride4.TabIndex = 3;
+            this.GdExportPaletteOverride4.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride4.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride4_CheckedChanged);
+            // 
+            // GdExportPaletteOverride3
+            // 
+            this.GdExportPaletteOverride3.AutoSize = true;
+            this.GdExportPaletteOverride3.Location = new System.Drawing.Point(48, 19);
+            this.GdExportPaletteOverride3.Name = "GdExportPaletteOverride3";
+            this.GdExportPaletteOverride3.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride3.TabIndex = 2;
+            this.GdExportPaletteOverride3.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride3.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride3_CheckedChanged);
+            // 
+            // GdExportPaletteOverride2
+            // 
+            this.GdExportPaletteOverride2.AutoSize = true;
+            this.GdExportPaletteOverride2.Location = new System.Drawing.Point(27, 19);
+            this.GdExportPaletteOverride2.Name = "GdExportPaletteOverride2";
+            this.GdExportPaletteOverride2.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride2.TabIndex = 1;
+            this.GdExportPaletteOverride2.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride2.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride2_CheckedChanged);
+            // 
+            // GdExportPaletteOverride1
+            // 
+            this.GdExportPaletteOverride1.AutoSize = true;
+            this.GdExportPaletteOverride1.Location = new System.Drawing.Point(6, 19);
+            this.GdExportPaletteOverride1.Name = "GdExportPaletteOverride1";
+            this.GdExportPaletteOverride1.Size = new System.Drawing.Size(15, 14);
+            this.GdExportPaletteOverride1.TabIndex = 0;
+            this.GdExportPaletteOverride1.UseVisualStyleBackColor = true;
+            this.GdExportPaletteOverride1.CheckedChanged += new System.EventHandler(this.GdExportPaletteOverride1_CheckedChanged);
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.AutoSize = true;
@@ -3618,6 +4513,16 @@ namespace SonicRetro.SonLVL.GUI
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -3910,5 +4815,77 @@ namespace SonicRetro.SonLVL.GUI
 		private System.Windows.Forms.ToolStripMenuItem godotExportToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+		private System.Windows.Forms.TabPage tabPage6;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride14;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride13;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride12;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride11;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride10;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride9;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride8;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride7;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride6;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride5;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride4;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride3;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride2;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride1;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride28;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride26;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride25;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride24;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride23;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride22;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride21;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride20;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride19;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride18;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride17;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride16;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride15;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride29;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride30;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride31;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride32;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride59;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride62;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride63;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride64;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride61;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride60;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride58;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride57;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride56;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride55;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride54;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride53;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride52;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride51;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride50;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride49;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride48;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride47;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride46;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride45;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride44;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride43;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride42;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride41;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride40;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride39;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride38;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride37;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride36;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride35;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride34;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride33;
+		private System.Windows.Forms.CheckBox GdExportPaletteOverride27;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.Panel panel4;
+		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private System.Windows.Forms.NumericUpDown numericUpDown2;
+		private System.Windows.Forms.NumericUpDown numericUpDown3;
+		private System.Windows.Forms.Panel GdExportPaletteOverridePanel;
 	}
 }
