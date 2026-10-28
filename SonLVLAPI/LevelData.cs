@@ -2338,6 +2338,11 @@ namespace SonicRetro.SonLVL.API
 			return GdExportPalette[line, index].RGBColor;
 		}
 
+		public static void GdExportColorToPalette(int line, int index, Color color)
+		{
+			GdExportPalette[line, index] = new SonLVLColor(color);
+		}
+
 		public static void ColorToPalette(int line, int index, Color color)
 		{
 			Palette[CurPal][line, index] = new SonLVLColor(color);

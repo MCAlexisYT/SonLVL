@@ -337,7 +337,7 @@ namespace SonicRetro.SonLVL.API
 		public NamedPaletteList[] ExtraPalettes { get; set; }
 		[IniName("gdexport_override_palette_overrides")]
 		[IniCollection(IniCollectionMode.NoSquareBrackets, StartIndex = 2)]
-		public bool[] GdExportOverridePaletteOverrides {get; set; };
+		public bool[] GdExportOverridePaletteOverrides {get; set; }
 		[IniName("gdexport_override_palette_colors")]
 		[IniCollection(IniCollectionMode.NoSquareBrackets, StartIndex = 2)]
 		public ushort[] GdExportOverridePaletteColors {get; set; }

@@ -130,7 +130,8 @@ namespace SonicRetro.SonLVL
 		Objects,
 		Foreground,
 		Background,
-		Art
+		Art,
+		GdExportPaletteStuff
 	}
 
 	public enum ArtTab

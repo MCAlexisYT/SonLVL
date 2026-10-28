@@ -283,9 +283,9 @@ namespace SonicRetro.SonLVL.GUI
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.ExportColorBlue = new System.Windows.Forms.NumericUpDown();
+            this.ExportColorGreen = new System.Windows.Forms.NumericUpDown();
+            this.ExportColorRed = new System.Windows.Forms.NumericUpDown();
             this.GdExportPaletteOverridePanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.GdExportPaletteOverride59 = new System.Windows.Forms.CheckBox();
@@ -505,9 +505,9 @@ namespace SonicRetro.SonLVL.GUI
             this.tabPage6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExportColorBlue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExportColorGreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExportColorRed)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -3150,17 +3150,17 @@ namespace SonicRetro.SonLVL.GUI
             this.groupBox2.Size = new System.Drawing.Size(449, 107);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Palette";
             // 
             // panel4
             // 
             this.panel4.AutoSize = true;
             this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel4.Controls.Add(this.numericUpDown1);
+            this.panel4.Controls.Add(this.ExportColorBlue);
             this.panel4.Controls.Add(label5);
-            this.panel4.Controls.Add(this.numericUpDown2);
+            this.panel4.Controls.Add(this.ExportColorGreen);
             this.panel4.Controls.Add(label6);
-            this.panel4.Controls.Add(this.numericUpDown3);
+            this.panel4.Controls.Add(this.ExportColorRed);
             this.panel4.Controls.Add(label7);
             this.panel4.Enabled = false;
             this.panel4.Location = new System.Drawing.Point(335, 16);
@@ -3169,26 +3169,26 @@ namespace SonicRetro.SonLVL.GUI
             this.panel4.Size = new System.Drawing.Size(106, 78);
             this.panel4.TabIndex = 6;
             // 
-            // numericUpDown1
+            // ExportColorBlue
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(50, 55);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.ExportColorBlue.Location = new System.Drawing.Point(50, 55);
+            this.ExportColorBlue.Name = "ExportColorBlue";
+            this.ExportColorBlue.Size = new System.Drawing.Size(53, 20);
+            this.ExportColorBlue.TabIndex = 5;
             // 
-            // numericUpDown2
+            // ExportColorGreen
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(50, 29);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDown2.TabIndex = 3;
+            this.ExportColorGreen.Location = new System.Drawing.Point(50, 29);
+            this.ExportColorGreen.Name = "ExportColorGreen";
+            this.ExportColorGreen.Size = new System.Drawing.Size(53, 20);
+            this.ExportColorGreen.TabIndex = 3;
             // 
-            // numericUpDown3
+            // ExportColorRed
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(50, 3);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDown3.TabIndex = 1;
+            this.ExportColorRed.Location = new System.Drawing.Point(50, 3);
+            this.ExportColorRed.Name = "ExportColorRed";
+            this.ExportColorRed.Size = new System.Drawing.Size(53, 20);
+            this.ExportColorRed.TabIndex = 1;
             // 
             // GdExportPaletteOverridePanel
             // 
@@ -3198,6 +3198,8 @@ namespace SonicRetro.SonLVL.GUI
             this.GdExportPaletteOverridePanel.Size = new System.Drawing.Size(320, 80);
             this.GdExportPaletteOverridePanel.TabIndex = 1;
             this.GdExportPaletteOverridePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.GdExportPaletteOverridePanel_Paint);
+            this.GdExportPaletteOverridePanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.GdExportPaletteOverridePanel_MouseDoubleClick);
+            this.GdExportPaletteOverridePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GdExportPaletteOverridePanel_MouseDown);
             // 
             // groupBox1
             // 
@@ -3270,7 +3272,7 @@ namespace SonicRetro.SonLVL.GUI
             this.groupBox1.Size = new System.Drawing.Size(345, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Which Entries to Override";
             // 
             // GdExportPaletteOverride59
             // 
@@ -4518,9 +4520,9 @@ namespace SonicRetro.SonLVL.GUI
             this.groupBox2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExportColorBlue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExportColorGreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExportColorRed)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
@@ -4883,9 +4885,9 @@ namespace SonicRetro.SonLVL.GUI
 		private System.Windows.Forms.CheckBox GdExportPaletteOverride27;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Panel panel4;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
-		private System.Windows.Forms.NumericUpDown numericUpDown2;
-		private System.Windows.Forms.NumericUpDown numericUpDown3;
+		private System.Windows.Forms.NumericUpDown ExportColorBlue;
+		private System.Windows.Forms.NumericUpDown ExportColorGreen;
+		private System.Windows.Forms.NumericUpDown ExportColorRed;
 		private System.Windows.Forms.Panel GdExportPaletteOverridePanel;
 	}
 }
