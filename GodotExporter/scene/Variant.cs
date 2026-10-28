@@ -610,9 +610,9 @@ namespace SonicRetro.SonLVL.GodotExporter
 				case VariantType.PROJECTION:
 					return ProjectionValue.ToString();
 				case VariantType.STRINGNAME:
-					return "&\"" + StringValue + "\"";
+					return "&\"" + StringValue.Replace("\\", "\\\\").Replace("\"", "\\\"") + "\"";
 				case VariantType.NODEPATH:
-					return "NodePath(\"" + StringValue + ")";
+					return "NodePath(\"" + StringValue.Replace("\\", "\\\\").Replace("\"", "\\\"") + ")";
 				case VariantType.BOOL:
 					return BoolValue.ToString();
 				case VariantType.EXTERNAL_DEPENDENCY:
