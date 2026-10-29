@@ -17,17 +17,19 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 			public int z_index;
 
 		}
-		Variant.Vector2i TileSize = new Variant.Vector2i(128, 128);
-		// each entry corresponds to a tile source (like an image/texture)
-		List<Dictionary<Variant.Vector2i, TileData>> Tiles;
-		List<Chunk> Textures;
+		public Variant.Vector2i TileSize = new Variant.Vector2i(128, 128);
+		// each entry (of both Textures and Tiles) corresponds to a tile source (like an image/texture)
+		public List<Dictionary<Variant.Vector2i, TileData>> Tiles;
+		public List<ImageProxy> Textures;
 
-		public SceneInternalResource[] ToResource()
+		public Dictionary<int, int> CollisionLayers;
+
+		public SceneInternalResource[] ToResource(string id)
 		{
 			SceneInternalResource res = new SceneInternalResource
 			{
 				Type = "TileSet",
-				ID = "LevelTileset"
+				ID = id
 			};
 
 
@@ -59,6 +61,12 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 
 				list.Add(atlas);
 				i++;
+			}
+
+			foreach (KeyValue<int, int> layer in CollisionLayers)
+			{
+				atlas.KVs["physics_layer_" + layer.Key + "/collision_layer"] = Variant.FromPrimitive(layer.Value);
+				atlas.KVs["physics_layer_" + layer.Key + "/collision_mask"] = Variant.FromPrimitive(layer.Value);
 			}
 			return list.ToArray();
 		}

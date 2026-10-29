@@ -23,6 +23,13 @@ namespace SonicRetro.SonLVL.GodotExporter
 
 			Chunk[] chunks = LevelData.Chunks.ToArray();
 
+			#region tileset graphics generation stuff
+
+			ImageProxy img_not_priority = ImageProxy.FromAllChunks(false);
+			ImageProxy img_priority = ImageProxy.FromAllChunks(true);
+
+			#endregion
+
 			#region tileset creation stuff
 			Variant coll_layer_0 = Variant.FromPrimitive(1 << 0);
 			Variant coll_layer_1 = Variant.FromPrimitive(1 << 0 & 1 << 1 & 1 << 2 & 1 << 3);
@@ -33,66 +40,49 @@ namespace SonicRetro.SonLVL.GodotExporter
 			Variant coll_layer_0h = Variant.FromPrimitive(coll_layer_0.IntValue << 8);
 			Variant coll_layer_1h = Variant.FromPrimitive(coll_layer_1.IntValue << 8);
 			Variant coll_layer_2h = Variant.FromPrimitive(coll_layer_2.IntValue << 8);
-			SceneInternalResource tileset = new SceneInternalResource
+			TilesetProxy tileset = new TileSetProxy
 			{
-				ID = "tileset",
-				Type = "TileSet",
-				KVs =
+				CollisionLayers = {
+					{ 0, coll_layer_0 },
+					{ 1, coll_layer_1 },
+					{ 2, coll_layer_2 },
+					{ 3, coll_layer_0l },
+					{ 4, coll_layer_1l },
+					{ 5, coll_layer_2l },
+					{ 6, coll_layer_0h },
+					{ 7, coll_layer_1h },
+					{ 9, coll_layer_2h },
+				},
+				Textures = new List<ImageProxy>(new ImageProxy[]
 				{
-					{ "physics_layer_0/collision_layer", coll_layer_0 },
-					{ "physics_layer_0/collision_mask", coll_layer_0 },
-					{ "physics_layer_1/collision_layer", coll_layer_1 },
-					{ "physics_layer_1/collision_mask", coll_layer_1 },
-					{ "physics_layer_2/collision_layer", coll_layer_2},
-					{ "physics_layer_2/collision_mask", coll_layer_2 },
-					{ "physics_layer_3/collision_layer", coll_layer_0l },
-					{ "physics_layer_3/collision_mask", coll_layer_0l },
-					{ "physics_layer_4/collision_layer", coll_layer_1l },
-					{ "physics_layer_4/collision_mask", coll_layer_1l },
-					{ "physics_layer_5/collision_layer", coll_layer_2l },
-					{ "physics_layer_5/collision_mask", coll_layer_2l },
-					{ "physics_layer_6/collision_layer", coll_layer_0h },
-					{ "physics_layer_6/collision_mask", coll_layer_0h },
-					{ "physics_layer_7/collision_layer", coll_layer_1h },
-					{ "physics_layer_7/collision_mask", coll_layer_1h },
-					{ "physics_layer_8/collision_layer", coll_layer_2h },
-					{ "physics_layer_8/collision_mask", coll_layer_2h },
-				}
+					img_not_priority,
+					img_priority
+				}),
+				TileSize = new Variant.Vector2i(LevelData.Level.ChunkWidth, LevelData.Level.ChunkHeight)
 			};
-			#endregion
 
-			#region tileset graphics generation stuff
-
-
+			// tile generation
+			for (int i = 0; i < LevelData.Level.Chunks.Length; i++)
+			{
+				
+			}
 
 			#endregion
+			
 
-			SceneNode background = new SceneNode
+			TileMapLayerProxy background = new TileMapLayerProxy
 			{
-				Type = "TileMapLayer",
-				Name = "Background",
-				KVs = {
-					{"tile_set", Variant.FromInternalResource(tileset) }
-				}
+				TileSet = tileset,
 			};
 
-			SceneNode foreground = new SceneNode
+			TileMapLayerProxy foreground = new TileMapLayerProxy
 			{
-				Type = "TileMapLayer",
-				Name = "Foreground",
-				KVs = {
-					{"tile_set", Variant.FromInternalResource(tileset)}
-				}
+				TileSet = tileset,
 			};
 
-			SceneNode priority_foreground = new SceneNode
+			TileMapLayerProxy priority_foreground = new TileMapLayerProxy
 			{
-				Type = "TileMapLayer",
-				Name = "PriorityForeground",
-				KVs =
-				{
-					{"tile_set", Variant.FromInternalResource(tileset)}
-				}
+				TileSet = tileset,
 			};
 
 			#region generate tiles

@@ -37,6 +37,28 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 			Palette = new ColorPalette(palette);
 		}
 
+		public static ImageProxy FromAllChunks(bool is_priority)
+		{
+			bool is_s2 = false;
+			switch (LevelData.Level.ChunkFormat)
+			{
+				case EngineVersion.S2:
+				case EngineVersion.S2NA:
+				case EngineVersion.S3K:
+				case EngineVersion.SKC:
+					is_s2 = true;
+					break;
+			}
+			int width = (is_s2) ? 128 : 256;
+			int height = LevelData.ChunkSprites.Length * width;
+			ImageProxy img = new ImageProxy(width, height);
+			for (int i = 0; i < LevelData.ChunkSprites.Length; i++)
+			{
+				ImageProxy chunk = FromChunk(i, is_priority);
+
+			}
+		}
+
 		public static ImageProxy FromChunk(int chunk_index, bool is_priority)
 		{
 			bool is_s2 = false;
@@ -99,11 +121,11 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 				{
 					{
 						"data",	Variant.FromDictionary(
-							new Dictionary<Variant, Variant>{
-								{ Variant.FromPrimitive("width"), Variant.FromPrimitive(Size.Width) },
-								{ Variant.FromPrimitive("height"), Variant.FromPrimitive(Size.Height) },
-								{ Variant.FromPrimitive("format"), Variant.FromPrimitive("RGBA8") },
-								{ Variant.FromPrimitive("data"), Variant.FromPrimitiveArray(data.ToArray()) }
+							new Dictionary<string, Variant>{
+								{ "width", Variant.FromPrimitive(Size.Width) },
+								{ "height", Variant.FromPrimitive(Size.Height) },
+								{ "format", Variant.FromPrimitive("RGBA8") },
+								{ "data", Variant.FromPrimitiveArray(data.ToArray()) }
 							}
 						)
 					}

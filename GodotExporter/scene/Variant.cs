@@ -854,6 +854,17 @@ namespace SonicRetro.SonLVL.GodotExporter
 			};
 		}
 
+		public static Variant FromDictionary(Dictionary<string, Variant> dict)
+		{
+			Dictionary<Variant, Variant> dict2 = new Dictionary<Variant, Variant>();
+
+			foreach (KeyValuePair<string, Variant> keyval in dict)
+			{
+				dict2[Variant.FromPrimitive(keyval.Key)] = keyval.Value;
+			}
+			return dict2;
+		}
+
 		public static Variant FromVec2Array(Vector2[] value)
 		{
 			return new Variant
