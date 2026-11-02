@@ -70,5 +70,14 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 			}
 			return list.ToArray();
 		}
+
+		public static TileSetProxy FromGodotTres(string data)
+		{
+			TileSetProxy tileset = new TileSetProxy();
+
+			
+
+			return tileset;
+		}
 	}
 }

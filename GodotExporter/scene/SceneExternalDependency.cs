@@ -1,3 +1,6 @@
+using System;
+using System.Text.RegularExpressions;
+
 namespace SonicRetro.SonLVL.GodotExporter
 {
 
@@ -16,6 +19,22 @@ namespace SonicRetro.SonLVL.GodotExporter
 		public string GetReference()
 		{
 			return "ExtResource(\"" + ID + "\")";
+		}
+
+		public static SceneExternalDependency FromString(string data)
+		{
+			Regex regex_root = new Regex("^\[ext_resource (.*)\]$");
+			Regex regex_type = new Regex("type=\"(.*)\"");
+			Regex regex_uid = new Regex("uid=\"(.*)\"");
+			Regex regex_path = new Regex("path=\"(.*)\"");
+			Regex regex_id = new Regex("id=\"(.*)\"");
+
+			
+
+			return new SceneExternalDependency
+			{
+				
+			};
 		}
 	}
 }

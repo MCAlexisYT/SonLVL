@@ -50,27 +50,27 @@ namespace SonicRetro.SonLVL.GodotExporter
 			ImageProxy img_not_priority = ImageProxy.FromAllChunks(false);
 			ImageProxy img_priority = ImageProxy.FromAllChunks(true);
 			
-			Variant coll_layer_0 = Variant.FromPrimitive(1 << 0);
-			Variant coll_layer_1 = Variant.FromPrimitive(1 << 0 & 1 << 1 & 1 << 2 & 1 << 3);
-			Variant coll_layer_2 = Variant.FromPrimitive(1 << 1 & 1 << 2 & 1 << 3);
-			Variant coll_layer_0l = Variant.FromPrimitive(coll_layer_0.IntValue << 4);
-			Variant coll_layer_1l = Variant.FromPrimitive(coll_layer_1.IntValue << 4);
-			Variant coll_layer_2l = Variant.FromPrimitive(coll_layer_2.IntValue << 4);
-			Variant coll_layer_0h = Variant.FromPrimitive(coll_layer_0.IntValue << 8);
-			Variant coll_layer_1h = Variant.FromPrimitive(coll_layer_1.IntValue << 8);
-			Variant coll_layer_2h = Variant.FromPrimitive(coll_layer_2.IntValue << 8);
+			int coll_layer_0 = 0b0001;
+			int coll_layer_1 = 0b1111;
+			int coll_layer_2 = 0b1110;
+			int coll_layer_0l = coll_layer_0 << 4;
+			int coll_layer_1l = coll_layer_1 << 4;
+			int coll_layer_2l = coll_layer_2 << 4;
+			int coll_layer_0h = coll_layer_0 << 8;
+			int coll_layer_1h = coll_layer_1 << 8;
+			int coll_layer_2h = coll_layer_2 << 8;
 			TileSetProxy tileset = new TileSetProxy
 			{
 				CollisionLayers = {
-					{ 0, coll_layer_0.IntValue },
-					{ 1, coll_layer_1.IntValue },
-					{ 2, coll_layer_2.IntValue },
-					{ 3, coll_layer_0l.IntValue },
-					{ 4, coll_layer_1l.IntValue },
-					{ 5, coll_layer_2l.IntValue },
-					{ 6, coll_layer_0h.IntValue },
-					{ 7, coll_layer_1h.IntValue },
-					{ 9, coll_layer_2h.IntValue },
+					{ 0, coll_layer_0 },
+					{ 1, coll_layer_1 },
+					{ 2, coll_layer_2 },
+					{ 3, coll_layer_0l },
+					{ 4, coll_layer_1l },
+					{ 5, coll_layer_2l },
+					{ 6, coll_layer_0h },
+					{ 7, coll_layer_1h },
+					{ 8, coll_layer_2h },
 				},
 				Textures = new List<ImageProxy>(new ImageProxy[]
 				{
