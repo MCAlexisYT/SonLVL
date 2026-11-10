@@ -43,50 +43,7 @@ namespace SonicRetro.SonLVL.GodotExporter
 
 			Scene scene = new Scene();
 
-			Chunk[] chunks = LevelData.Chunks.ToArray();
-
-			#region tileset creation stuff
-
-			ImageProxy img_not_priority = ImageProxy.FromAllChunks(false);
-			ImageProxy img_priority = ImageProxy.FromAllChunks(true);
-			
-			int coll_layer_0 = 0b0001;
-			int coll_layer_1 = 0b1111;
-			int coll_layer_2 = 0b1110;
-			int coll_layer_0l = coll_layer_0 << 4;
-			int coll_layer_1l = coll_layer_1 << 4;
-			int coll_layer_2l = coll_layer_2 << 4;
-			int coll_layer_0h = coll_layer_0 << 8;
-			int coll_layer_1h = coll_layer_1 << 8;
-			int coll_layer_2h = coll_layer_2 << 8;
-			TileSetProxy tileset = new TileSetProxy
-			{
-				CollisionLayers = {
-					{ 0, coll_layer_0 },
-					{ 1, coll_layer_1 },
-					{ 2, coll_layer_2 },
-					{ 3, coll_layer_0l },
-					{ 4, coll_layer_1l },
-					{ 5, coll_layer_2l },
-					{ 6, coll_layer_0h },
-					{ 7, coll_layer_1h },
-					{ 8, coll_layer_2h },
-				},
-				Textures = new List<ImageProxy>(new ImageProxy[]
-				{
-					img_not_priority,
-					img_priority
-				}),
-				TileSize = new Variant.Vector2i(LevelData.Level.ChunkWidth, LevelData.Level.ChunkHeight)
-			};
-
-			// tile generation
-			for (int i = 0; i < chunks.Length; i++)
-			{
-				
-			}
-
-			#endregion
+			TileSetProxy tileset = TileSetProxy.FromAllChunks();
 
 			SceneInternalResource[] tileset_resources = tileset.ToResource("tileset");
 			scene.Resources.AddRange(tileset_resources);

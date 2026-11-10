@@ -43,6 +43,12 @@ namespace SonicRetro.SonLVL.GodotExporter
 				X = (float)x;
 				Y = (float)y;
 			}
+
+			public Vector2(PointF value)
+			{
+				X = value.X;
+				Y = value.Y;
+			}
 		}
 		public class Vector2i
 		{
@@ -67,6 +73,12 @@ namespace SonicRetro.SonLVL.GodotExporter
 				Y = y;
 			}
 			public Vector2i(Vector2i value)
+			{
+				X = value.X;
+				Y = value.Y;
+			}
+
+			public Vector2i(Point value)
 			{
 				X = value.X;
 				Y = value.Y;
@@ -862,7 +874,11 @@ namespace SonicRetro.SonLVL.GodotExporter
 			{
 				dict2[Variant.FromPrimitive(keyval.Key)] = keyval.Value;
 			}
-			return dict2;
+			return new Variant
+			{
+				Type = VariantType.DICTIONARY,
+				DictionaryValue = dict2
+			};
 		}
 
 		public static Variant FromVec2Array(Vector2[] value)
@@ -871,6 +887,20 @@ namespace SonicRetro.SonLVL.GodotExporter
 			{
 				Type = VariantType.PACKEDVECTOR2ARRAY,
 				PackedVector2ArrayValue = new List<Vector2>(value)
+			};
+		}
+
+		public static Variant FromVec2Array(PointF[] value)
+		{
+			List<Variant.Vector2> list = new List<Vector2>();
+			foreach (PointF p in value)
+			{
+				list.Add(new Vector2(p));
+			}
+			return new Variant
+			{
+				Type = VariantType.PACKEDVECTOR2ARRAY,
+				PackedVector2ArrayValue = list
 			};
 		}
 
@@ -907,5 +937,4 @@ namespace SonicRetro.SonLVL.GodotExporter
 			return FromVec4Array(value.ToArray());
 		}
 	}
-
 }

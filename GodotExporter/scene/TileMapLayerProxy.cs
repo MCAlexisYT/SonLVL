@@ -21,7 +21,7 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 		public SceneInternalResource TileSet;
 		public Dictionary<Variant.Vector2i, TileMapCell> Tiles;
 
-		public override SceneNode ToNode(string name)
+		public SceneNode ToNode(string name)
 		{
 			List<byte> byteArray = new List<byte>();
 

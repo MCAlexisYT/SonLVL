@@ -2335,7 +2335,7 @@ namespace SonicRetro.SonLVL.API
 
 		public static Color GdExportPaletteToColor(int line, int index)
 		{
-			return (Level.GdExportOverridePaletteOverrides[line, index]) ? GdExportPalette[line, index].RGBColor : Palette[line, index].RGBColor;
+			return (Level.GdExportOverridePaletteOverrides[line*16 + index]) ? GdExportPalette[line, index].RGBColor : Palette[0][line, index].RGBColor;
 		}
 
 		public static void GdExportColorToPalette(int line, int index, Color color)

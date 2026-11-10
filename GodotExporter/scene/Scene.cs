@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using SonicRetro.SonLVL.API;
 
-namespace SonicRetro.SonLVL.GodotExporter.scene
+namespace SonicRetro.SonLVL.GodotExporter
 {
 	public class Scene
 	{
@@ -36,7 +37,5 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 			}
 			return str;
 		}
-
-
 	}
 }
