@@ -38,27 +38,27 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 			ImageProxy img_priority = ImageProxy.FromAllChunks(true);
 			ImageProxy img_both = ImageProxy.FromBackgroundChunks();
 
-			int coll_layer_0 = 0b0001;
-			int coll_layer_1 = 0b1111;
-			int coll_layer_2 = 0b1110;
-			int coll_layer_0l = coll_layer_0 << 4;
-			int coll_layer_1l = coll_layer_1 << 4;
-			int coll_layer_2l = coll_layer_2 << 4;
-			int coll_layer_0h = coll_layer_0 << 8;
-			int coll_layer_1h = coll_layer_1 << 8;
-			int coll_layer_2h = coll_layer_2 << 8;
+			int coll_layer_topsolid = 0b0001;
+			int coll_layer_allsolid = 0b1111;
+			int coll_layer_lrbsolid = 0b1110;
+			int coll_layer_topsolid_l  = coll_layer_topsolid << 4;
+			int coll_layer_allsolid_l  = coll_layer_allsolid << 4;
+			int coll_layer_lrbsolid_l  = coll_layer_lrbsolid << 4;
+			int coll_layer_topsolid_h  = coll_layer_topsolid << 8;
+			int coll_layer_allsolid_h  = coll_layer_allsolid << 8;
+			int coll_layer_lrbsolid_h  = coll_layer_lrbsolid << 8;
 			TileSetProxy tileset = new TileSetProxy
 			{
 				CollisionLayers = {
-					{ 0, coll_layer_0 },
-					{ 1, coll_layer_1 },
-					{ 2, coll_layer_2 },
-					{ 3, coll_layer_0l },
-					{ 4, coll_layer_1l },
-					{ 5, coll_layer_2l },
-					{ 6, coll_layer_0h },
-					{ 7, coll_layer_1h },
-					{ 8, coll_layer_2h },
+					{ 0, coll_layer_topsolid},
+					{ 1, coll_layer_allsolid },
+					{ 2, coll_layer_lrbsolid },
+					{ 3, coll_layer_topsolid_l  },
+					{ 4, coll_layer_allsolid_l  },
+					{ 5, coll_layer_lrbsolid_l  },
+					{ 6, coll_layer_topsolid_h  },
+					{ 7, coll_layer_allsolid_h  },
+					{ 8, coll_layer_lrbsolid_h  },
 				},
 				Textures = new List<ImageProxy>(new ImageProxy[]
 				{
@@ -84,11 +84,12 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 
 			for (int i = 0; i < 256; i++)
 			{
+				// builds collision tiles in horizontal strips (the geometry will get optimized by godot at runtime anyway)
 				col_blocks[i] = new List<List<PointF>>();
 				
 				for (int iY = 0; iY < 16; iY++)
 				{
-					col_blocks[i].Add(new List<PointF>());
+					List<PointF> strip = new List<PointF>();
 					bool has_found = false;
 					int start = 0;
 					int end = 15;
@@ -111,18 +112,29 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 					}
 					if (has_found)
 					{
-						col_blocks[i][iY].AddRange(new PointF[]{
+						strip.AddRange(new PointF[]{
 							new PointF(start, iY),
 							new PointF(end, iY),
 							new PointF(end, iY + 1),
 							new PointF(start, iY + 1)
 						});
+						col_blocks[i].Add(strip);
 					}
 				}
 			}
 
 			#endregion
 
+			bool chunk_is_s2 = false;
+			switch (LevelData.Game.ChunkFormat)
+			{
+				case EngineVersion.S2:
+				case EngineVersion.S2NA:
+				case EngineVersion.S3K:
+				case EngineVersion.SKC:
+					chunk_is_s2 = true;
+					break;
+			}
 			// tile generation
 			for (int i2 = 0; i2 < 3; i2++)
 			{
@@ -130,14 +142,107 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 			}
 			for (int i = 0; i < chunks.Length; i++)
 			{
+				TileData tiles = new TileData
+				{
+					z_index = 0,
+					polygons =
+					{
+						{3, new List<List<PointF>>()},
+						{4, new List<List<PointF>>()},
+						{5, new List<List<PointF>>()},
+						{6, new List<List<PointF>>()},
+						{7, new List<List<PointF>>()},
+						{8, new List<List<PointF>>()}
+					}
+				};
+				tileset.Tiles[1][new Point(0, i)] = new TileData
+				{
+					z_index = 9999999
+				};
+				tileset.Tiles[2][new Point(0, i)] = new TileData
+				{
+					z_index = 0
+				};
 
-				tileset.Tiles[1][new Point(0, i)] = new TileData();
-				tileset.Tiles[2][new Point(0, i)] = new TileData();
+				for (int iX = 0; iX < tileset.TileSize.Width / 16; iX++)
+				{
+					for (int iY = 0; iY < tileset.TileSize.Height / 16; iY++)
+					{
+						ChunkBlock block = chunks[i].Blocks[iX, iY];
+						Solidity sol1 = block.Solid1;
+						byte sol1_idx = LevelData.GetColInd1(block.Block);
+						if (sol1 != Solidity.NotSolid)
+						{
+							tiles.polygons[solidity(sol1, false)].AddRange(
+								col_offset(
+									iX * 16 - tileset.TileSize.Width / 2,
+									iY * 16 - tileset.TileSize.Height / 2,
+									col_blocks[sol1_idx]
+								)
+							);
+						}
+						if (chunk_is_s2)
+						{
+							S2ChunkBlock block2 = (S2ChunkBlock)block;
+							Solidity sol2 = block2.Solid2;
+							byte sol2_idx = LevelData.GetColInd2(block.Block);
+
+							if (sol2 != Solidity.NotSolid)
+							{
+								tiles.polygons[solidity(sol2, true)].AddRange(
+									col_offset(
+										iX * 16 - tileset.TileSize.Width / 2,
+										iY * 16 - tileset.TileSize.Height / 2,
+										col_blocks[sol2_idx]
+									)
+								);
+							}
+						}
+					}
+				}
+
+				tileset.Tiles[0][new Point(0, i)] = tiles;
 			}
 
 			#endregion
 
 			return tileset;
+		}
+
+		private static int solidity(Solidity sol, bool is_priority)
+		{
+			switch (sol)
+			{
+				case Solidity.TopSolid:
+					return is_priority ? 6 : 3;
+					break;
+				case Solidity.AllSolid:
+					return is_priority ? 7 : 4;
+					break;
+				case Solidity.LRBSolid:
+					return is_priority ? 8 : 5;
+					break;
+			}
+			return -1;
+		}
+
+		private static List<List<PointF>> col_offset(int x, int y, List<List<PointF>> block)
+		{
+			List<List<PointF>> output = new List<List<PointF>>();
+
+			PointF point = new PointF(x, y);
+			foreach (List<PointF> strip in block)
+			{
+				output.Add(new List<PointF>
+				{
+					strip[0] + point,
+					strip[1] + point,
+					strip[2] + point,
+					strip[3] + point
+				});
+			}
+
+			return output;
 		}
 
 		private static SceneInternalResource ImageTextureScript = new SceneInternalResource
@@ -149,10 +254,10 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 				{"script/source", Variant.FromPrimitive(@"
 					extends ImageTexture
 
-					@export var image: Image
-
-					func _init() -> void:
-						set_image(image)
+					@export var image: Image:
+						set(value):
+							set_image(value)
+							image = value
 				") }
 			}
 		};
