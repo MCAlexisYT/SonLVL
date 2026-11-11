@@ -4,6 +4,7 @@ using System;
 using SonicRetro.SonLVL.GodotExporter.scene;
 using System.IO;
 using System.Windows.Forms;
+using SonicRetro.SonLVL.API.XMLDef;
 
 namespace SonicRetro.SonLVL.GodotExporter
 {
@@ -43,6 +44,10 @@ namespace SonicRetro.SonLVL.GodotExporter
 
 			Scene scene = new Scene();
 
+			SceneNode root_node = new SceneNode();
+			root_node.Type = "Node2D";
+			root_node.Name = "LevelGeo";
+
 			TileSetProxy tileset = TileSetProxy.FromAllChunks();
 
 			SceneInternalResource[] tileset_resources = tileset.ToResource("tileset");
@@ -65,10 +70,43 @@ namespace SonicRetro.SonLVL.GodotExporter
 
 			#region generate tiles
 
-
+			for (int iX = 0; iX < LevelData.BGWidth; iX++)
+			{
+				for (int iY = 0; iY < LevelData.BGHeight; iY++)
+				{
+					background.Tiles[new Point(iX, iY)] = new TileMapLayerProxy.TileMapCell
+					{
+						source_id = 2,
+						coord_x = 0,
+						coord_y = LevelData.Layout.BGLayout[iX, iY],
+						alternative_tile = 0,
+					};
+				}
+			}
+			for (int iX = 0; iX < LevelData.FGWidth; iX++)
+			{
+				for (int iY = 0; iY < LevelData.FGHeight; iY++)
+				{
+					foreground.Tiles[new Point(iX, iY)] = new TileMapLayerProxy.TileMapCell
+					{
+						source_id = 0,
+						coord_x = 0,
+						coord_y = LevelData.Layout.FGLayout[iX, iY],
+						alternative_tile = 0,
+					};
+					priority_foreground.Tiles[new Point(iX, iY)] = new TileMapLayerProxy.TileMapCell
+					{
+						source_id = 0,
+						coord_x = 0,
+						coord_y = LevelData.Layout.FGLayout[iX, iY],
+						alternative_tile = 0,
+					};
+				}
+			}
 
 			#endregion
 
+			scene.Nodes.Add(background.ToNode("background"));
 			scene.Nodes.Add(foreground.ToNode("foreground"));
 			scene.Nodes.Add(priority_foreground.ToNode("priority_foreground"));
 

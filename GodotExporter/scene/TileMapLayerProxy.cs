@@ -19,7 +19,7 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 		}
 
 		public SceneInternalResource TileSet;
-		public Dictionary<Variant.Vector2i, TileMapCell> Tiles;
+		public Dictionary<Point, TileMapCell> Tiles;
 
 		public SceneNode ToNode(string name)
 		{
@@ -28,7 +28,7 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 			// corresponds to this line: https://github.com/godotengine/godot/blob/cafc17a192acf67903910a68aeb3c076c0907a4b/modules/tilemap/tile_map_layer.h#L44
 			Marshalls.encode_uint16((ushort)0, byteArray);
 
-			foreach (KeyValuePair<Variant.Vector2i, TileMapCell> cell in Tiles) {
+			foreach (KeyValuePair<Point, TileMapCell> cell in Tiles) {
 				// tile position in tilemap
 				Marshalls.encode_uint16((ushort)cell.Key.X, byteArray);
 				Marshalls.encode_uint16((ushort)cell.Key.Y, byteArray);

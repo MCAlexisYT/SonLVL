@@ -18,7 +18,18 @@ namespace SonicRetro.SonLVL.GodotExporter
 				str = "[node name=\"" + Name + "\" type=\"" + Type + "\" parent=\"" + Parent + " instance=" + Instance.GetReference() + "]";
 			}
 
-			foreach (var kv in KVs)
+			foreach (KeyValuePair<string, Variant> kv in KVs)
+			{
+				str += "\n" + kv.Key + " = " + kv.Value.ToString();
+			}
+
+			return str;
+		}
+
+		public string RootToString()
+		{
+			string str = "[node name=\"" + Name + "\" type=\"" + Type + "\"]";
+			foreach (KeyValuePair<string, Variant> kv in KVs)
 			{
 				str += "\n" + kv.Key + " = " + kv.Value.ToString();
 			}

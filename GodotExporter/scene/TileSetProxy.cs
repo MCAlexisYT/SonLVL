@@ -50,15 +50,15 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 			TileSetProxy tileset = new TileSetProxy
 			{
 				CollisionLayers = {
-					{ 0, coll_layer_topsolid},
+					{ 0, coll_layer_topsolid },
 					{ 1, coll_layer_allsolid },
 					{ 2, coll_layer_lrbsolid },
-					{ 3, coll_layer_topsolid_l  },
-					{ 4, coll_layer_allsolid_l  },
-					{ 5, coll_layer_lrbsolid_l  },
-					{ 6, coll_layer_topsolid_h  },
-					{ 7, coll_layer_allsolid_h  },
-					{ 8, coll_layer_lrbsolid_h  },
+					{ 3, coll_layer_topsolid_l },
+					{ 4, coll_layer_allsolid_l },
+					{ 5, coll_layer_lrbsolid_l },
+					{ 6, coll_layer_topsolid_h },
+					{ 7, coll_layer_allsolid_h },
+					{ 8, coll_layer_lrbsolid_h },
 				},
 				Textures = new List<ImageProxy>(new ImageProxy[]
 				{
@@ -170,9 +170,9 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 					{
 						ChunkBlock block = chunks[i].Blocks[iX, iY];
 						Solidity sol1 = block.Solid1;
-						byte sol1_idx = LevelData.GetColInd1(block.Block);
 						if (sol1 != Solidity.NotSolid)
 						{
+							byte sol1_idx = LevelData.GetColInd1(block.Block);
 							tiles.polygons[solidity(sol1, false)].AddRange(
 								col_offset(
 									iX * 16 - tileset.TileSize.Width / 2,
@@ -185,10 +185,10 @@ namespace SonicRetro.SonLVL.GodotExporter.scene
 						{
 							S2ChunkBlock block2 = (S2ChunkBlock)block;
 							Solidity sol2 = block2.Solid2;
-							byte sol2_idx = LevelData.GetColInd2(block.Block);
 
 							if (sol2 != Solidity.NotSolid)
 							{
+								byte sol2_idx = LevelData.GetColInd2(block.Block);
 								tiles.polygons[solidity(sol2, true)].AddRange(
 									col_offset(
 										iX * 16 - tileset.TileSize.Width / 2,
